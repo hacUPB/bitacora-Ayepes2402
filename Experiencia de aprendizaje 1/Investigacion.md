@@ -9,28 +9,38 @@ Un computador digital moderno es un aparato que procesa la información usando c
 
 Procesador (CPU): Es quien ejecuta las instrucciones.  
 Memoria RAM: Guarda temporalmente los datos mientras se usan.  
-Almacenamiento: Guarda programas, fotos, archivos, etc.  
-Pantalla, teclado, mouse, etc.: Son los elementos para interactuar con el computador.
+Memoria ROM: Contiene informacion que solo se puede leer (No see borra como la RAM) 
+Dispositivos de entrada: Sirven para darle informacion al computador
+Dispositivos de salida: Reproducen la informacion que el computador procesa
 
 
 ### Actividad 02
 
 * ¿Qué es entonces un programa?
 
+Un programa es una serie de instrucciones que puede ser secuencial que se guarda en la memoria ram (Memoria de Acceso Aleatorio) y rom (Read-Only Memory).
+
   
 * ¿Qué es un lenguaje ensamblador?
 
+Es el lenguaje que traduce el lenguaje de maquina para los humanos.
   
 * ¿Qué es lenguaje de máquina?
 
-  
+  Lenguaje compuesto por ceros y unos el cual seria el lenguaje de la maquina.
 
 ### Actividad 03
 * ¿Qué son PC, D y A?
 
+PC: Es el encargado de guardar la direccion de la siguiente instruccion.  
+D: Guarda datos temporales.  
+A: Guarda un numero o una direccion en la memoria.
   
 * ¿Para qué los usa la CPU?
 
+PC se usa para las instrucciones que van a estar mas adelante y asi poderse ejecutar en el orden correcto.  
+D se usa para guardar valores mientras uno elige que hacer con ellos (operaciones, etc)
+A se usa para guardar un numero o una direccion en la memoria.
   
 
 * Mover el contenido de la posición 200 a la 100 
