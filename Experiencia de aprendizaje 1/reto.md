@@ -211,9 +211,9 @@ M=1
 (LOOP)
 ```
 14.Implementa en ensamblador:
-```
+
 R4 = RAM[R1]
-```
+
 ``
 @R4 = RAM[R1]
 @R1
