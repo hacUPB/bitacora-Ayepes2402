@@ -45,6 +45,11 @@ Dentro del bucle (LOOP), traté de acceder a arr[j] sumando j con la dirección 
 En este programa lo que hice fue comparar si el valor que hay en D es igual a 7. Para eso le resté 7 con D=D-A, y luego usé D;JEQ para que salte a la posición 69 si el resultado es cero.  
 
 ### Reto 18
+Este ejercicio permite comprender cómo una imagen puede representarse en memoria binaria y cómo traducirla a instrucciones concretas en un sistema computacional simple, cada instrucción escribe una porción de la imagen en la RAM de video. Esto conecta conceptos de memoria gráfica, direcciones de memoria, y manipulación de bits.  
+
+### Reto 19  
+
+### Reto 20  
 
 
 
