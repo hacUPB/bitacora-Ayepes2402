@@ -293,3 +293,5 @@ D=D-A
 D;JEQ 
 ```
 18.Dibujo
+<img width="1280" height="733" alt="image" src="https://github.com/user-attachments/assets/7276a87a-623e-43bc-a5a1-39c5965d7736" />
+
