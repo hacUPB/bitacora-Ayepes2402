@@ -221,7 +221,8 @@ D=M
 @R4
 M=D
 ```
-15.Implementa en ensamblador el siguiente problema. En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. Almacena un -1 en esa región de memoria.
+15.Implementa en ensamblador el siguiente problema. En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. Almacena un -1 en esa región de memoria.  
+
 ```
 (LOOP)
 @R0
@@ -235,6 +236,7 @@ M=M+1
 @LOOP
 D;JNE
 ```
+
 16.Implementa en lenguaje ensamblador el siguiente programa:
 ```
 int[] arr = new int[10];
