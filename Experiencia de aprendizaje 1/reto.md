@@ -180,6 +180,8 @@ D=M
 D=D+M
 @69
 D=D+A
+@4
+M=D
 ```
 13.Implementa en ensamblador:
 ```
@@ -198,7 +200,7 @@ D=D-A
 D;JGE
 
 //R0<0
-@R!
+@R1
 M=-1
 @LOOP
 @;JMP
@@ -214,9 +216,9 @@ M=1
 
 R4 = RAM[R1]
 
-``
-@R4 = RAM[R1]
+```
 @R1
+A=M
 D=M
 @R4
 M=D
@@ -225,7 +227,7 @@ M=D
 
 ```
 (LOOP)
-@R0
+@R0S
 A=M
 M=-1
 @R1
@@ -234,7 +236,7 @@ D=M
 @R0
 M=M+1
 @LOOP
-D;JNE
+D;JNE  
 ```
 
 16.Implementa en lenguaje ensamblador el siguiente programa:
@@ -272,8 +274,22 @@ D;JLE
 @END
 0;JMP
 ```
-* ¿Qué hace este programa?
-* ¿Cuál es la dirección base de arr en la memoria RAM?
-* ¿Cuál es la dirección base de sum en la memoria RAM y por qué?
-* ¿Cuál es la dirección base de j en la memoria RAM y por qué?
+* ¿Qué hace este programa?  
 
+* ¿Cuál es la dirección base de arr en la memoria RAM?  
+
+* ¿Cuál es la dirección base de sum en la memoria RAM y por qué?  
+
+* ¿Cuál es la dirección base de j en la memoria RAM y por qué?  
+
+17.Implementa en lenguaje ensamblador:
+```
+if ( (D - 7) == 0) goto a la instrucción en ROM[69]
+```
+```
+@7
+D=D-A     
+@69
+D;JEQ 
+```
+18.Dibujo
