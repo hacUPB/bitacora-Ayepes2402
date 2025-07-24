@@ -45,7 +45,7 @@ M=D
 6.Si el valor almacenado en D es igual a 0 salta a la posición 100 de la ROM.
 ```
 @100
-D;JMP
+D;JEQ
 ```
 7.Si el valor almacenado en la posición 100 de la RAM es menor a 100 salta a la posición 20 de la ROM.
 ```
@@ -210,3 +210,68 @@ M=1
 @;JMP
 (LOOP)
 ```
+14.Implementa en ensamblador:
+```
+R4 = RAM[R1]
+```
+``
+@R4 = RAM[R1]
+@R1
+D=M
+@R4
+M=D
+```
+15.Implementa en ensamblador el siguiente problema. En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. Almacena un -1 en esa región de memoria.
+```
+(LOOP)
+@R0
+A=M
+M=-1
+@R1
+M=M-1
+D=M
+@R0
+M=M+1
+@LOOP
+D;JNE
+```
+16.Implementa en lenguaje ensamblador el siguiente programa:
+```
+int[] arr = new int[10];
+int sum = 0;
+for (int j = 0; j < 10; j++) {
+    sum = sum + arr[j];
+}
+```
+Lenguaje ensamblador:
+```
+@10
+D=A
+@arr
+M=D
+D=M
+@sum
+M=0
+@j
+M=0
+(LOOP)
+@j
+A=D+M
+D=M
+@sum
+M=M+1
+@10
+D=A
+@j
+D=D-M
+@LOOP
+D;JLE
+(END)
+@END
+0;JMP
+```
+* ¿Qué hace este programa?
+* ¿Cuál es la dirección base de arr en la memoria RAM?
+* ¿Cuál es la dirección base de sum en la memoria RAM y por qué?
+* ¿Cuál es la dirección base de j en la memoria RAM y por qué?
+
