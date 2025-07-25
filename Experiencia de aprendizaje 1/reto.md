@@ -82,7 +82,7 @@ sum = 0
 sum = sum + i
 i = i + 1
 ```
-//La traducción a lenguaje ensamblador del programa anterior es:
+10.La traducción a lenguaje ensamblador del programa anterior es:
 ```
 // i = 1
 @i
