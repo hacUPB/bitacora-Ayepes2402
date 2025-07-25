@@ -1,4 +1,3 @@
-//complementarlas mas
 ### Reto 1  
 Lo que hice fue guardar el número 1798 en el registro D. Primero usé @1798 para poner ese valor en el registro A, y luego con D=A pasé ese número al registro D. Así ya tengo guardado ese dato en D.  
 
