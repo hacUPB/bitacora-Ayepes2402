@@ -18,7 +18,10 @@ En este ejercicio sumé lo que hay en la posición 0 de la RAM con lo que hay en
 Primero usé @100 para indicar la dirección a la que quiero saltar, y luego D;JEQ para que el salto ocurra solo si D es igual a cero.  
 
 ### Reto 7  
-Primero guardé el número 50 en la posición 100 de la RAM. Luego comparé ese valor con 100 restando 100 - RAM[100], y como el resultado fue negativo (porque 50 es menor que 100), se hizo el salto a la posición 20 de la ROM con D;JLT    
+Primero guardé el número 50 en la posición 100 de la RAM. Luego comparé ese valor con 100 restando 100 - RAM[100], y como el resultado fue negativo (porque 50 es menor que 100), se hizo el salto a la posición 20 de la ROM con D;JLT  
+
+## Reto 8  
+Para responder las preguntas me ayudó bastante lo que vimos en clase ya que con eso me quedaron los temas más claros y pude responder facilmente.
 
 ### Reto 10
 En este programa lo que hice fue tomar el valor que está en R0 y guardarlo en el registro D. Luego, con M=D+D, quise guardar el doble de ese valor en R1 para asi generar la operacion de 2 * R0.   
@@ -45,7 +48,12 @@ Dentro del bucle (LOOP), traté de acceder a arr[j] sumando j con la dirección 
 ### Reto 17 
 En este programa lo que hice fue comparar si el valor que hay en D es igual a 7. Para eso le resté 7 con D=D-A, y luego usé D;JEQ para que salte a la posición 69 si el resultado es cero.  
 
-### Reto 18
+### Reto 19  
+Según lo que entendí este programa utiliza direcciones y está diseñado para usarse con pantalla y teclado.  
+
+### Reto 20  
+Utilicé el programa dado en la página para poder hacer el dibujo, luego cambié a la opción Hack assembly para tener el codigo y luego se organizó para que sea posible con la letra d.
+
 
 
 
