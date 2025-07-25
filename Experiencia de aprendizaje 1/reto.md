@@ -165,7 +165,7 @@ Como son comentarios no estarian en ningun lado
 * ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?  
 Posicionarse en el @1000, en la memoria ROM y en la direccion 0  
 * ¿Qué son CONT y LOOP?  
-CONT y LOOP son etiquetas 
+CONT y LOOP son etiquetas  
 Cont: es un contador  
 LOOP: es un bucle con una condicion  
 * ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?  
@@ -275,12 +275,13 @@ D;JLE
 0;JMP
 ```
 * ¿Qué hace este programa?  
-
+El programa trabaja con un arreglo de 10 posiciones y una variable llamada sum. A medida que avanza por cada posición, va agregando el valor de ese elemento a sum, y termina cuando ya ha pasado por todas las posiciones del arreglo.  
 * ¿Cuál es la dirección base de arr en la memoria RAM?  
-
+La direccion de arr es 16  
 * ¿Cuál es la dirección base de sum en la memoria RAM y por qué?  
-
+La direccion de sum es 17 porque arr está antes y se organizan secuencialmente.
 * ¿Cuál es la dirección base de j en la memoria RAM y por qué?  
+La direccion de j es la 18 porque antes está arr y sum
 
 17.Implementa en lenguaje ensamblador:
 ```
@@ -294,4 +295,167 @@ D;JEQ
 ```
 18.Dibujo
 <img width="1280" height="733" alt="image" src="https://github.com/user-attachments/assets/7276a87a-623e-43bc-a5a1-39c5965d7736" />
+
+19.Analiza el siguiente programa en lenguaje de máquina:
+```
+0100000000000000
+1110110000010000
+0000000000010000
+1110001100001000
+0110000000000000
+1111110000010000
+0000000000010011
+1110001100000101
+0000000000010000
+1111110000010000
+0100000000000000
+1110010011010000
+0000000000000100
+1110001100000110
+0000000000010000
+1111110010101000
+1110101010001000
+0000000000000100
+1110101010000111
+0000000000010000
+1111110000010000
+0110000000000000
+1110010011010000
+0000000000000100
+1110001100000011
+0000000000010000
+1111110000100000
+1110111010001000
+0000000000010000
+1111110111001000
+0000000000000100
+1110101010000111
+```
+¿Qué hace este programa?  
+Este programa está programado para que se pueda interactuar con la pantalla y el teclado.  
+
+20.Implementa un programa en lenguaje ensamblador que dibuje el bitmap que diseñaste en la pantalla solo si se presiona la tecla “d”.
+```
+//Espera hasta que R0 tenga el valor 100 (ASCII de 'd')
+(LOOP)
+@24576
+D=M
+@100
+D=D-A       
+@draw
+D;JEQ       
+@LOOP
+0;JMP
+
+(draw)
+	// put bitmap location value in R12
+	// put code return address in R13
+	@SCREEN
+	D=A
+	@R12
+	AD=D+M
+	// row 8
+	@31806 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	// row 9
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@31133 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	// row 10
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@31807 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	AD=A+1 // D holds addr
+	M=1
+	// row 11
+	D=A // D holds previous addr
+	@31
+	AD=D+A
+	@385 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	AD=A+1 // D holds addr
+	M=1
+	// row 12
+	D=A // D holds previous addr
+	@31
+	AD=D+A
+	@32509 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	AD=A+1 // D holds addr
+	M=1
+	// row 13
+	D=A // D holds previous addr
+	@31
+	AD=D+A
+	@32762 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	// row 14
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@32756 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	// row 15
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@16360 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=A-D // RAM[addr]=-val
+	// row 16
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@24624 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	// row 17
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@12384 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	// row 18
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@6592 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	// row 19
+	D=A // D holds previous addr
+	@32
+	AD=D+A
+	@1792 // A holds val
+	D=D+A // D = addr + val
+	A=D-A // A=addr + val - val = addr
+	M=D-A // RAM[addr] = val
+	// return
+	@R13
+	A=M
+	D;JMP
+```
 
