@@ -22,6 +22,9 @@ Primero guardé el número 50 en la posición 100 de la RAM. Luego comparé ese 
 ### Reto 8  
 Para responder las preguntas me ayudó bastante lo que vimos en clase ya que con eso me quedaron los temas más claros y pude responder facilmente.
 
+### Reto 9  
+Con este ejercicio pude recordar mucho más lo de variables ademas de que fue una forma practica de como optimizar un código.
+
 ### Reto 10
 En este programa lo que hice fue tomar el valor que está en R0 y guardarlo en el registro D. Luego, con M=D+D, quise guardar el doble de ese valor en R1 para asi generar la operacion de 2 * R0.   
 
