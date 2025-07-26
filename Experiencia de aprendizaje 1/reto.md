@@ -82,7 +82,7 @@ sum = 0
 sum = sum + i
 i = i + 1
 ```
-10.La traducción a lenguaje ensamblador del programa anterior es:
+La traducción a lenguaje ensamblador del programa anterior es:
 ```
 // i = 1
 @i
@@ -191,6 +191,7 @@ else R1 = –1
 (LOOP)
 goto LOOP
 ```
+La traducción a lenguaje ensamblador del programa anterior es:
 ```
 @R0
 D=M
