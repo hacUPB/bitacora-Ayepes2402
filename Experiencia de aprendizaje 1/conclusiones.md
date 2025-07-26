@@ -19,7 +19,7 @@ Primero usé @100 para indicar la dirección a la que quiero saltar, y luego D;J
 ### Reto 7  
 Primero guardé el número 50 en la posición 100 de la RAM. Luego comparé ese valor con 100 restando 100 - RAM[100], y como el resultado fue negativo (porque 50 es menor que 100), se hizo el salto a la posición 20 de la ROM con D;JLT  
 
-## Reto 8  
+### Reto 8  
 Para responder las preguntas me ayudó bastante lo que vimos en clase ya que con eso me quedaron los temas más claros y pude responder facilmente.
 
 ### Reto 10
