@@ -19,8 +19,11 @@ Primero usé @100 para indicar la dirección a la que quiero saltar, y luego D;J
 ### Reto 7  
 Primero guardé el número 50 en la posición 100 de la RAM. Luego comparé ese valor con 100 restando 100 - RAM[100], y como el resultado fue negativo (porque 50 es menor que 100), se hizo el salto a la posición 20 de la ROM con D;JLT  
 
-## Reto 8  
+### Reto 8  
 Para responder las preguntas me ayudó bastante lo que vimos en clase ya que con eso me quedaron los temas más claros y pude responder facilmente.
+
+### Reto 9  
+Con este ejercicio pude recordar mucho más lo de variables ademas de que fue una forma practica de como optimizar un código.
 
 ### Reto 10
 En este programa lo que hice fue tomar el valor que está en R0 y guardarlo en el registro D. Luego, con M=D+D, quise guardar el doble de ese valor en R1 para asi generar la operacion de 2 * R0.   
@@ -41,11 +44,13 @@ Primero usé @R1 y A=M para moverme a esa dirección, luego con D=M tomé el val
 lo que quise hacer fue guardar -1 en una región de memoria, comenzando desde la dirección que está en R0, y repitiéndolo tantas veces como indica el valor de R1. Usé LOOP para que en cada vuelta intente guardar -1 en la posición apuntada por R0. Luego le resté 1 a R1 para ir contando cuántas posiciones faltan, y sumé 1 a R0 para avanzar a la siguiente dirección. El ciclo se repite mientras R1 no sea cero usando D;JNE.  
 
 ### Reto 16  
-En este programa empecé el arreglo con un tamaño de 10, y también creé una variable sum que empieza en 0, y otra variable j que decidi usar como contador.  
-Dentro del bucle (LOOP), traté de acceder a arr[j] sumando j con la dirección base del arreglo, y luego sumar ese valor a sum. Después aumenté j para seguir al siguiente elemento. El ciclo se repite mientras j < 10. 
+En este programa empecé el arreglo con un tamaño de 10, y también creé una variable sum que empieza en 0, y otra variable j que decidi usar como contador. Dentro del bucle (LOOP), traté de acceder a arr[j] sumando j con la dirección base del arreglo, y luego sumar ese valor a sum. Después aumenté j para seguir al siguiente elemento. El ciclo se repite mientras j < 10. 
 
 ### Reto 17 
 En este programa lo que hice fue comparar si el valor que hay en D es igual a 7. Para eso le resté 7 con D=D-A, y luego usé D;JEQ para que salte a la posición 69 si el resultado es cero.  
+
+### Reto 18
+No es una conclusión como tal pero quiero decir que me pareció muy interesante como con solo dibujar se logre conseguir un código.  
 
 ### Reto 19  
 Según lo que entendí este programa utiliza direcciones y está diseñado para usarse con pantalla y teclado.  
