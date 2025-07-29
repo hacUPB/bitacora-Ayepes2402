@@ -6,7 +6,7 @@
 //Paso 3: Esa dirección la guardo en una variable para ir avanzando de a una.
 //Paso 4: Luego en un ciclo voy poniendo cero en donde esté parado, eso hace que se apague todo ese bloque de puntos.
 //Paso 5: Después de poner cero le sumo uno para pasar a lo que sigue, como si fuera la siguiente parte de la pantalla.
-//Paso 6: Repito lo mismo hasta que llego casi al final, que creo que es antes del teclado, como por el 24500 y algo, y ahí ya paro y vuelvo al inicio.
+//Paso 6: Repito lo mismo hasta que llego casi al final (24576) y ahí ya paro y vuelvo al inicio.
 
 //Resultado bueno despues del intento
 (LOOP)
