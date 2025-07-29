@@ -8,27 +8,5 @@ La pantalla (@SCREEN) está mapeada desde la dirección 16384 hasta 24575. Cada 
 
 El teclado (KBD) está en la dirección 24576. Si se presiona una tecla, esta dirección contiene su código y no hay ninguna tecla presionada, contiene 0.  
 
-Inventa un programa que haga uso de la entrada-salida mapeada a memoria.  
-
-(LOOP)
-    @KBD
-    D=M 
-
-    @109       
-    D=D-A      
-    @CLEAR_LOOP
-    D;JNE  
-
-    @SCREEN
-    M=-1
-    @LOOP
-    0;JMP
-
-(CLEAR_LOOP)
-    @SCREEN
-    M=0
-    @LOOP
-    0;JMP
-
 Investiga el funcionamiento del programa con el simulador.  
 Lo que hace este programa es que si precionas la letra M este enciende los primeros 16 píxeles y si no es M los apaga.
