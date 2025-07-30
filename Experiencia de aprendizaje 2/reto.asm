@@ -1,13 +1,5 @@
 //Actividad 3
 
-//Intento de actividad en palabras
-//Paso 1: Primero miro la parte del teclado. Si la tecla que está en memoria no es la d, entonces me voy para la parte donde se borra la pantalla.
-//Paso 2: Para empezar a borrar, me voy a la dirección de la pantalla (@16348)
-//Paso 3: Esa dirección la guardo en una variable para ir avanzando de a una.
-//Paso 4: Luego en un ciclo voy poniendo cero en donde esté parado, eso hace que se apague todo ese bloque de puntos.
-//Paso 5: Después de poner cero le sumo uno para pasar a lo que sigue, como si fuera la siguiente parte de la pantalla.
-//Paso 6: Repito lo mismo hasta que llego casi al final (24576) y ahí ya paro y vuelvo al inicio.
-
 //Resultado bueno despues del intento
 (LOOP)
 @24576
@@ -154,8 +146,7 @@ D=M
 	0;JMP
 
 //Actividad 4
-//Trataria de hacerlo de la misma manera que con la d pero teniendo en cuenta que e es @101 y que tendria el @clear. pdt: no funcionó y no tengo idea de por que, este solo dejó de funcionar (ya no dibuja)
-
+(LOOP)
 @24576
 D=M
 @100
@@ -169,7 +160,7 @@ D=M
 @101
 D=D-A
 @clear
-D;JEQ       
+D;JEQ   
 
 @LOOP
 0;JMP
@@ -281,6 +272,49 @@ D;JEQ
 	A=D-A // A=addr + val - val = addr
 	M=D-A // RAM[addr] = val
 	// return
-	@R13
-	A=M
-	D;JMP
+	@LOOP
+	0;JMP
+	
+(clear)
+    @SCREEN
+    D=A
+    @addr
+    M=D 
+
+(CLEAR_LOOP)
+    @addr
+    A=M
+    M=0  
+
+    @addr
+    M=M+1 
+
+    @addr
+    D=M
+    @24576
+    D=A-D
+    @CLEAR_LOOP
+    D;JGT
+
+    @LOOP
+    0;JMP
+
+	(END)
+	@END
+	0;JMP
+
+//Actividad 5.4
+
+@10 
+A=D 
+@var
+M=D
+@var
+D=A
+@punt
+M=D
+@20
+D=A
+@punt
+A=M
+M=D
