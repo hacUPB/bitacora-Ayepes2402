@@ -41,4 +41,4 @@ Regresé el @clear a minuscula y cambié mejor el (clear) a minusculas y funcion
     @addr
     M=D 
 ```
-En conclusión, gran parte de los problemas fue por no prestar atencion a detalles como poner el (LOOP) para cerrarlo, poner el (clear) y (CLEAR_LOOP) para que borre y tener mucho cuidado a la hora de escribir las eetiquetas porque tienen que coincidir en si estan en mayusculas o minusculas.
+En conclusión, gran parte de los problemas fue por no prestar atencion a detalles como poner el (LOOP) para cerrarlo, poner el (clear) y (CLEAR_LOOP) para que borre y tener mucho cuidado a la hora de escribir las etiquetas porque tienen que coincidir en si estan en mayusculas o minusculas.
