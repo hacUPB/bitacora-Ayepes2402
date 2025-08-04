@@ -37,7 +37,7 @@ Verifiqué en el simulador que las variables i, sum y limit se inicializaran cor
 **RAE 2**  
 Verifiqué que sum iniciara en 0, i en 1 y limit en 100. Observé que i se incrementaba y su valor se sumaba correctamente a sum en cada ciclo. El programa se detuvo cuando i superó 100. Al final, el resultado en sum fue 5050, lo que confirmó que funcionó correctamente.
 
-### Reto 4
+### Reto 4  
 **RAE 2**  
 Ahora vamos a acercarnos al concepto de puntero. Un puntero es una variable que almacena la dirección de memoria de otra variable. Observa el siguiente programa escrito en C++:
     ```asm
@@ -61,12 +61,12 @@ Con el operador `&`. `punt = &var;`
 - ¿Cómo se escribe el contenido de la variable a la que apunta un puntero?  
 Con el operador . `punt = 20;`. En este caso como `punt` contiene la dirección de `var`  entonces `punt` a la izquierda del igual indica que quieres actualizar el valor de la variable `var` .
 
-### Reto 5
-**RAE 2**
+### Reto 5  
+**RAE 2**  
 Primero observé que al inicio el valor 10 se asignara correctamente a la variable var. Luego, comprobé que la variable punt almacenara una dirección de memoria, correspondiente a la ubicación de var. Más adelante, me aseguré de que el acceso indirecto mediante @punt y A=M permitiera modificar el contenido de var desde esa dirección. Finalmente, al seguir la ejecución paso a paso en el simulador, confirmé que el valor de var cambiaba de 10 a 20 gracias a la manipulación indirecta con el puntero, lo cual demostraba que el comportamiento esperado se cumplía correctamente.
 
-### Reto 6 y 7
-**RAE 2**
+### Reto 6 y 7  
+**RAE 2**  
 Para hacer este ejercicio primero tuve que comprender mejor como funciona el puntero, lo primero que hice fue crear la var1 y var2 y les di sus valores, luego creé el puntero para que tome la direccion de var1 y asi luego desligarlo y lograr que ahora var2 valga 10.
 
 ### Reto 8  
@@ -84,6 +84,6 @@ Esto hace que la var2 valga lo que está en la posición del puntero (el puntero
 - ¿Qué hace esto `pvar = &var3`?
 Sirve para que el puntero almacene la dirección de la variable.
 
-### Reto 9  
-**RAE 2**
+### Reto 9   
+**RAE 2**  
 Primero se crea las funciones (MAIN) y (suma), dentro de main se salta para (suma) y dentro de este se haría la operacion y al hacer la operacion salta a (volver) que es una nueva función que fue creada para darle continuidad al proceso y evitar que así se entre en un bucle entre (suma) y (main)
