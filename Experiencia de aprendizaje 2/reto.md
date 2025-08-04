@@ -34,13 +34,12 @@ Para comprobar el correcto funcionamiento del programa, primero realicé pruebas
 Verifiqué en el simulador que las variables i, sum y limit se inicializaran correctamente. Luego, observé paso a paso que i se incrementaba y que sum acumulaba su valor en cada iteración. También comprobé que el ciclo terminaba cuando i superaba a 100. Al ejecutar todo el programa, el valor final de sum fue 5050, lo que confirmó que el código funciona correctamente.
 
 ### Reto 3  
-**Rae 3**  
+**RAE 3**  
 Verifiqué que sum iniciara en 0, i en 1 y limit en 100. Observé que i se incrementaba y su valor se sumaba correctamente a sum en cada ciclo. El programa se detuvo cuando i superó 100. Al final, el resultado en sum fue 5050, lo que confirmó que funcionó correctamente.
 
 ### Reto 4
-**Rae 4**  
+**RAE 4**  
 Ahora vamos a acercarnos al concepto de puntero. Un puntero es una variable que almacena la dirección de memoria de otra variable. Observa el siguiente programa escrito en C++:
-    
     ```
     cpp
     int var = 10;
@@ -48,7 +47,6 @@ Ahora vamos a acercarnos al concepto de puntero. Un puntero es una variable que 
     punt = &var;
     *punt = 20;
     ```
-    
     El programa anterior modifica el contenido de la variable `var` por medio de la variable `punt`. `punt` es un puntero porque almacena la dirección de memoria de la variable `var` . En este caso el valor de la variable `var`  será 20 luego de ejecutar `*punt = 20;`. Ahora analiza:
     
     - ¿Cómo se declara un puntero en C++?   
