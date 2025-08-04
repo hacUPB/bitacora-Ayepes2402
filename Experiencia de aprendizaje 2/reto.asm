@@ -7,8 +7,8 @@ While (i <= 100){
    i++;
 }
 
-//enguaje ensamblador
-```
+//lenguaje ensamblador  
+
 @i
 M=1         
 @sum
@@ -101,3 +101,60 @@ D=A
 @punt
 A=M
 M=D
+
+//Traduce este programa a lenguaje ensamblador:
+int a = 10;
+int b = 5;
+int *p;
+p = &a;
+b = *p;
+
+//Lenguaje ensamblador 
+@10
+D=A 
+@var1
+M=D
+@5
+D=A 
+@var2
+M=D
+@var1
+A=D
+@punt 
+M=D 
+@punt 
+A=M
+D=M
+@var2 
+M=D 
+
+//Considera que el punto de entrada del siguiente programa es la función main, es decir, el programa inicia llamando la función main. Vas a proponer una posible traducción a lenguaje ensamblador de la función suma, cómo llamar a suma y cómo regresar a std::cout << "El valor de c es: " << c << std::endl; una vez suma termine.
+#include <iostream>
+
+int suma(int a, int b) {
+   int var = a + b;
+   return var;
+}
+
+
+int main() {
+   int c = suma(6, 9);
+   std::cout << "El valor de c es: " << c << std::endl;
+   return 0;
+}
+
+//lenguaje ensamblador 
+
+(MAIN) 
+@suma 
+0:JMP
+(volver)
+(END)
+@END
+0:JMP
+
+
+(suma)
+@volver 
+0:JMP
+

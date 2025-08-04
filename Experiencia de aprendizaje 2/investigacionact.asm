@@ -1,4 +1,4 @@
-Inventa un programa que haga uso de la entrada-salida mapeada a memoria.  
+//Inventa un programa que haga uso de la entrada-salida mapeada a memoria.  
 ```
 (LOOP)
     @KBD
