@@ -24,3 +24,38 @@ Sirve para cambiar o actualizar lo que pasa con los circulos antes de dibujarlos
 **¿Qué hace la función draw?**  
 Se encarga de dibujar en la pantalla los los circulos con su respectivo color y en su posicion actual.
 
+### Actividad 3  
+Decidí cambiar la partícula a una elipse y puse sus posiciones correspondientes en los vértices. Aprendí que debo poner números diferentes o si no aparecerá ninguna figura.  
+```cpp
+ofDrawEllipse(pos.x -10, pos.y -10 , pos.x -50, pos.y -30);
+```
+
+También cambié para que la elipse cambie de color cada vez que se mueva  
+```cpp
+particleColor = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+```
+### Actividad 5​
+¿Cuál es la definición de un puntero?  
+variable que almacena la dirección de memoria de otra variable en lugar de almacenar directamente un valor.  
+
+¿Dónde está el puntero?  
+Está en "ofMain.h"
+
+¿Cómo se inicializa el puntero?
+
+```cpp
+vector<Sphere*> spheres;
+        Sphere* selectedSphere;
+```
+
+¿Para qué se está usando el puntero?  
+guarda la direccion de memoria de la esfera y tambien se usa para poder agarrar la esfera.
+
+¿Qué es exactamente lo que está almacenado en el puntero?  
+almacena la direccion del punto.
+
+### Actividad 6
+El error que pude notar es que a la hora de agarrar una de las esferas no es posible soltarla, haciendo así que no se pueda agarrar alguna otra de las que están allí.
+
+
+
