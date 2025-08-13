@@ -1,0 +1,61 @@
+### Activav 1  
+**¿Cuál es el resultado que se obtiene al ejecutar este programa?**    
+El resultado que se obtiene al poner este código es que aparece un cuadrado negro en el cual hay un círculo blanco de radio 20 que se mueve dependiendo de dónde muevas el cursor del mouse.
+
+### Actividad 2  
+**¿Qué fue lo que incluimos en el archivo .h?**  
+ En este archivo se guarda la estructura básica de la aplicación poniendo las funciones principales (setup(), update(), draw(), mouseMoved() y mousePressed()) para que así el programa funcione cuando se mueva el mouse y cuando se haga click.
+
+**¿Cómo funciona la aplicación?**  
+Se crea un cuadrado negro en el cual cuando mueves el mouse se traza una linea con concirculos blancos que va desapareciendo mientras avanza pero cuando se da click estos cambiarian a otro color.
+
+**¿Qué hace la función mouseMoved?**  
+ sirve para que el programa detecte la posición actual del puntero y pueda usarla para mover y crear la línea con los circulos.
+
+**¿Qué hace la función mousePressed?**  
+Sirve para cuando hacemos clic con el mouse el programa detecte qué botón presionamos y en qué posición para así realizar la acción de cambiar de color.
+
+**¿Qué hace la función setup?**  
+Sirve para configurar todo lo que se necesita antes de que empiece a funcionar, como establecer colores, tamaños, posiciones iniciales o cargar recursos.
+
+**¿Qué hace la función update?**  
+Sirve para cambiar o actualizar lo que pasa con los circulos antes de dibujarlos, por ejemplo, moverlos o modificar sus posiciones para que en la pantalla se vean en movimiento.  
+
+**¿Qué hace la función draw?**  
+Se encarga de dibujar en la pantalla los los circulos con su respectivo color y en su posicion actual.
+
+### Actividad 3  
+Decidí cambiar la partícula a una elipse y puse sus posiciones correspondientes en los vértices. Aprendí que debo poner números diferentes o si no aparecerá ninguna figura.  
+```cpp
+ofDrawEllipse(pos.x -10, pos.y -10 , pos.x -50, pos.y -30);
+```
+
+También cambié para que la elipse cambie de color cada vez que se mueva  
+```cpp
+particleColor = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+```
+### Actividad 5​
+¿Cuál es la definición de un puntero?  
+variable que almacena la dirección de memoria de otra variable en lugar de almacenar directamente un valor.  
+
+¿Dónde está el puntero?  
+Está en "ofMain.h"
+
+¿Cómo se inicializa el puntero?
+
+```cpp
+vector<Sphere*> spheres;
+        Sphere* selectedSphere;
+```
+
+¿Para qué se está usando el puntero?  
+guarda la direccion de memoria de la esfera y tambien se usa para poder agarrar la esfera.
+
+¿Qué es exactamente lo que está almacenado en el puntero?  
+almacena la direccion del punto.
+
+### Actividad 6
+El error que pude notar es que a la hora de agarrar una de las esferas no es posible soltarla, haciendo así que no se pueda agarrar alguna otra de las que están allí.
+
+
+
