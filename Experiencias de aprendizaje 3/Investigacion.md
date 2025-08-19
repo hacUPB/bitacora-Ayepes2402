@@ -56,6 +56,32 @@ almacena la direccion del punto.
 
 ### Actividad 6
 El error que pude notar es que a la hora de agarrar una de las esferas no es posible soltarla, haciendo así que no se pueda agarrar alguna otra de las que están allí.
+```cpp
+void mouseReleased(int x, int y, int button);
+```
+```cpp
+void ofApp::mouseReleased(int x, int y, int button){
+    if(button == OF_MOUSE_BUTTON_LEFT){
+        selectedSphere = nullptr;
+    }
+}
+```
+En el código puse un puntero llamado selectedSphere para que cuando haga clic en una esfera se pueda mover junto con el mouse. El problema era que la esfera quedaba pegada al cursor todo el tiempo, entonces agregué la función mouseReleased. Ahí lo que hago es que, cuando suelto el botón izquierdo, selectedSphere vuelve a nullptr y así la esfera deja de moverse cuando ya no tengo presionado el mouse.
+
+### Actividad 07
+**¿Qué sucede cuando presionas la tecla “c”?**  
+Cuando presiono “c”, el programa crea una esfera que se borra al terminar la función. El vector guarda su dirección, pero esa memoria ya no existe, así que el puntero queda malo y el programa puede fallar o mostrar cosas raras.
+
+**¿Qué sucede cuando presionas la tecla “c”?**  
+Se crea una esfera en el heap y su puntero se guarda en el vector, así el programa la puede seguir dibujando en la pantalla.
+
+**¿Por qué ocurre esto?**
+Porque en el heap la esfera no se borra cuando termina la función, entonces el puntero sigue siendo válido.
+
+### Actividad 08
+
+
+### Actividad 09
 
 
 
