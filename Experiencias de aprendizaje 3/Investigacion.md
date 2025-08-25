@@ -79,7 +79,9 @@ Se crea una esfera en el heap y su puntero se guarda en el vector, así el progr
 Porque en el heap la esfera no se borra cuando termina la función, entonces el puntero sigue siendo válido.
 
 ### Actividad 08
-
+New es variable que se crea en heap en la misma memoria ram, se pueden correr mientras el codigo está corriendo (duran toda la aplicación)
+Global es para datos permanentes y compartidos durante toda la ejecución. (está por fuera de todas las funciones)
+Stack es para variables locales rápidas y temporales.
 
 ### Actividad 09
 **¿Qué sucede cuando presionas la tecla “f”?**
@@ -87,6 +89,8 @@ Se eliminan los circulos creados al dar click.
 
 **Analiza detalladamente esta parte del código:**
 Esa parte del código se asegura de que el vector no esté vacío y, en caso de tener elementos, libera la memoria del último objeto creado en el heap con delete y luego elimina el puntero del vector con pop_back().
+
+
 
 
 
