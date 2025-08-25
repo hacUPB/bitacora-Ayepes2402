@@ -66,7 +66,7 @@ void ofApp::mouseReleased(int x, int y, int button){
     }
 }
 ```
-En el código puse un puntero llamado selectedSphere para que cuando haga clic en una esfera se pueda mover junto con el mouse. El problema era que la esfera quedaba pegada al cursor todo el tiempo, entonces agregué la función mouseReleased. Ahí lo que hago es que, cuando suelto el botón izquierdo, selectedSphere vuelve a nullptr y así la esfera deja de moverse cuando ya no tengo presionado el mouse.
+En el código puse un puntero para que cuando haga clic en una esfera se pueda mover junto con el mouse. El problema era que la esfera quedaba pegada al cursor todo el tiempo, entonces agregué la función mouseReleased. Ahí lo que hago es que, cuando suelto el botón izquierdo, selectedSphere vuelve a nullptr y así la esfera deja de moverse cuando ya no tengo presionado el mouse.
 
 ### Actividad 07
 **¿Qué sucede cuando presionas la tecla “c”?**  
