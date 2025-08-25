@@ -70,10 +70,10 @@ En el código puse un puntero llamado selectedSphere para que cuando haga clic e
 
 ### Actividad 07
 **¿Qué sucede cuando presionas la tecla “c”?**  
-Cuando presiono “c”, el programa crea una esfera que se borra al terminar la función. El vector guarda su dirección, pero esa memoria ya no existe, así que el puntero queda malo y el programa puede fallar o mostrar cosas raras.
+Cuando presiono “c”, el programa crea una esfera en el heap y te da la posición.
 
 **¿Qué sucede cuando presionas la tecla “c”?**  
-Se crea una esfera en el heap y su puntero se guarda en el vector, así el programa la puede seguir dibujando en la pantalla.
+Se crea una esfera en el heap y su puntero se guarda en el vector, así el programa la puede seguir dibujando en la pantalla (se muestra una esfera en la pantalla mientras que en el otro no).
 
 **¿Por qué ocurre esto?**
 Porque en el heap la esfera no se borra cuando termina la función, entonces el puntero sigue siendo válido.
