@@ -85,5 +85,8 @@ Porque en el heap la esfera no se borra cuando termina la función, entonces el 
 **¿Qué sucede cuando presionas la tecla “f”?**
 Se eliminan los circulos creados al dar click.
 
+**Analiza detalladamente esta parte del código:**
+Esa parte del código se asegura de que el vector no esté vacío y, en caso de tener elementos, libera la memoria del último objeto creado en el heap con delete y luego elimina el puntero del vector con pop_back().
+
 
 
