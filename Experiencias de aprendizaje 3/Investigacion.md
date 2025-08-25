@@ -82,6 +82,8 @@ Porque en el heap la esfera no se borra cuando termina la función, entonces el 
 
 
 ### Actividad 09
+**¿Qué sucede cuando presionas la tecla “f”?**
+Se eliminan los circulos creados al dar click.
 
 
 
