@@ -78,10 +78,77 @@ Se crea una esfera en el heap y su puntero se guarda en el vector, así el progr
 **¿Por qué ocurre esto?**
 Porque en el heap la esfera no se borra cuando termina la función, entonces el puntero sigue siendo válido.
 
-### Actividad 08
-New es variable que se crea en heap en la misma memoria ram, se pueden correr mientras el codigo está corriendo (duran toda la aplicación)
-Global es para datos permanentes y compartidos durante toda la ejecución. (está por fuera de todas las funciones)
-Stack es para variables locales rápidas y temporales.
+### Actividad 08  
+**Ideas despues de tu explicación:** New es variable que se crea en heap en la misma memoria ram, se pueden correr mientras el codigo está corriendo (duran toda la aplicación)  
+Global es para datos permanentes y compartidos durante toda la ejecución. (está por fuera de todas las funciones).   
+Stack es para variables locales rápidas y temporales.  
+
+```cpp
+#pragma once
+#include "ofMain.h"
+
+static ofRectangle globalRect(50, 50, 100, 100);
+
+class ofApp : public ofBaseApp{
+public:
+    void setup();
+    void update();
+    void draw();
+    void exit(); 
+
+    ofRectangle* heapRect;
+    ofPoint* heapCircleCenter; 
+};
+```
+```cpp
+#include "ofApp.h"
+
+
+void ofApp::setup(){
+    heapRect = new ofRectangle(200, 50, 100, 100);
+    heapCircleCenter = new ofPoint(500, 100); 
+}
+
+
+void ofApp::update(){
+
+}
+
+void ofApp::draw(){
+
+    ofSetColor(255, 0, 0);
+    ofDrawRectangle(globalRect);
+
+
+    ofSetColor(0, 255, 0);
+    ofDrawRectangle(*heapRect);
+
+
+    ofRectangle stackRect(350, 50, 100, 100);
+    ofSetColor(0, 0, 255);
+    ofDrawRectangle(stackRect);
+
+    ofSetColor(255, 255, 0);
+    ofDrawCircle(*heapCircleCenter, 50);
+
+    
+    ofSetColor(255);
+    ofDrawBitmapString("Global (rojo)", 50, 40);
+    ofDrawBitmapString("Heap Rect (verde)", 200, 40);
+    ofDrawBitmapString("Stack (azul)", 350, 40);
+    ofDrawBitmapString("Heap Circulo (amarillo)", 500, 40);
+}
+
+
+void ofApp::exit(){
+    delete heapRect;
+    delete heapCircleCenter; 
+    heapRect = nullptr;
+    heapCircleCenter = nullptr;
+}
+```
+**¿Cuándo debo crear objetos en el heap y cuándo en memoria global?**  
+Los objetos en memoria global los usaría cuando quiero que estén disponibles en todo el programa y siempre existan, pero debo tener cuidado porque ocupan memoria todo el tiempo. Los objetos en el heap los usaría cuando necesito crearlos o borrarlos mientras el programa corre, ya que ahí puedo manejarlos de forma dinámica con new y delete. Los objetos en el stack los usaría cuando solo los necesito dentro de una función y se borran solos al terminar esa función.
 
 ### Actividad 09
 **¿Qué sucede cuando presionas la tecla “f”?**
