@@ -151,10 +151,10 @@ void ofApp::exit(){
 Los objetos en memoria global los usaría cuando quiero que estén disponibles en todo el programa y siempre existan, pero debo tener cuidado porque ocupan memoria todo el tiempo. Los objetos en el heap los usaría cuando necesito crearlos o borrarlos mientras el programa corre, ya que ahí puedo manejarlos de forma dinámica con new y delete. Los objetos en el stack los usaría cuando solo los necesito dentro de una función y se borran solos al terminar esa función.
 
 ### Actividad 09
-**¿Qué sucede cuando presionas la tecla “f”?**
+**¿Qué sucede cuando presionas la tecla “f”?**   
 Se eliminan los circulos creados al dar click.
 
-**Analiza detalladamente esta parte del código:**
+**Analiza detalladamente esta parte del código:**  
 Esa parte del código se asegura de que el vector no esté vacío y, en caso de tener elementos, libera la memoria del último objeto creado en el heap con delete y luego elimina el puntero del vector con pop_back().
 
 
