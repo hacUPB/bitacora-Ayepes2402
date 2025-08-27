@@ -172,5 +172,5 @@ private:
 	float amplitude = 150.0f;
 };
 ```
-**¿Dónde se almacenan? ¿En qué parte de la memoria se guardan los objetos y cómo se gestionan?**
+**¿Dónde se almacenan? ¿En qué parte de la memoria se guardan los objetos y cómo se gestionan?**  
 En mi código, cuando el programa empieza se crea la clase ofApp con new, así que su memoria está en el heap. Dentro de esa clase está el vector spherePositions, que también usa el heap para guardar todos los puntos de tipo glm::vec3 en un bloque seguido de memoria. Cada vez que le agrego más puntos con push_back, el vector se encarga solo de pedir más memoria si la necesita. Las variables que se usan dentro de las funciones, como x, y, z o rayStart, se guardan en el stack y desaparecen al terminar la función. En mi código no tengo variables globales y todo se libera automáticamente cuando el programa termina.
