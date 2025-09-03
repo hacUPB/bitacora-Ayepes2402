@@ -14,7 +14,7 @@ Se usan porque cada nodo debe copiar la posición que tenía el nodo anterior, y
 Puedo poner mensajes con ofLog() o usar el depurador para ver las posiciones de cada nodo en cada actualización, y ahí me doy cuenta de que sí siguen al anterior. Si agrego más nodos después del setup(), la serpiente se vuelve más larga y esos nuevos nodos también empiezan a moverse siguiendo al resto.
 
 **¿Cómo saber si no hay fugas de memoria cuando termina el programa?**  
-Respuesta: El destructor de la lista llama a clear(), y ahí se borran todos los nodos. Si pongo un mensaje en el destructor de Node, puedo ver que se imprimen todos al final, lo que significa que se liberaron bien y no quedaron fugas de memoria.
+El destructor de la lista llama a clear(), y ahí se borran todos los nodos. Si pongo un mensaje en el destructor de Node, puedo ver que se imprimen todos al final, lo que significa que se liberaron bien y no quedaron fugas de memoria.
 
 **3. ¿Qué es una lista enlazada y en qué se diferencia de un arreglo en cuanto a la forma en que los elementos están almacenados en la memoria?**  
 Una lista enlazada es un conjunto de nodos que se conectan con punteros y pueden estar en distintas partes de la memoria y un arreglo guarda todos los elementos juntos, uno al lado del otro, en memoria.
