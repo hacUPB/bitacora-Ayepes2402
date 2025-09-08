@@ -59,7 +59,7 @@ Para que la memoria sea eficiente, me aseguraría de crear cada nodo con new sol
 
 ### Actividad 2
 
-1. **Entendiendo la aplicación**: comienza explorando detenidamente cómo funciona el programa. Usa un un modelo del lenguaje como ChatGPT y el depurador para que verifiques las explicaciones que te propone ChatGPT. Puedes escribir el prompt: quiere entender de manera muy detallada el siguiente programa escrito en C++ y el openframeworks. Luego le das el código. Ve preguntando lo que no entiendas. recuerda ir usando al mismo tiempo el depurador de visual studio.  
+**1. Entendiendo la aplicación**: comienza explorando detenidamente cómo funciona el programa. Usa un un modelo del lenguaje como ChatGPT y el depurador para que verifiques las explicaciones que te propone ChatGPT. Puedes escribir el prompt: quiere entender de manera muy detallada el siguiente programa escrito en C++ y el openframeworks. Luego le das el código. Ve preguntando lo que no entiendas. recuerda ir usando al mismo tiempo el depurador de visual studio.  
 
 **Parte 1: Stack (pila)**  
 Estructuras principales:    
@@ -126,7 +126,7 @@ En draw(), se dibujan todos los círculos de la cola.
 Stack (pila) → LIFO (Last In, First Out): el último en entrar es el primero en salir.  
 Queue (cola) → FIFO (First In, First Out): el primero en entrar es el primero en salir.  
 
-2. **Realiza evaluaciones formativas**. Dile a ChatGPT que te genere preguntas para verificar si entiendes cómo funciona el programa. Trata de verificar tus hipótesis usando el depurador y luego con las conclusiones del experimento responde la pregunta de ChatGPT. Continúa con este proceso hasta que estés seguro de que entiendes cómo funciona el programa.  
+**2. Realiza evaluaciones formativas**. Dile a ChatGPT que te genere preguntas para verificar si entiendes cómo funciona el programa. Trata de verificar tus hipótesis usando el depurador y luego con las conclusiones del experimento responde la pregunta de ChatGPT. Continúa con este proceso hasta que estés seguro de que entiendes cómo funciona el programa.  
 
 **Si haces push(100,100) en una pila vacía, ¿qué valor tiene circleStack.top->next?**  
 Cuando el stack está vacío, el nuevo nodo no tiene nadie debajo, así que su next se queda en nullptr (ya que no apunta a ningun otro lado.)
@@ -151,7 +151,7 @@ ambos (front y rear) apuntan al mismo nodo debido a que ese único nodo es el pr
 **Si desencolas todos los nodos, ¿qué pasa con front y rear?**   
 Ambos vuelven a nullptr. Eso indica que la cola está vacía y que no hay memoria asignada.
 
-3. **Pruebas:** pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.  
+**3. Pruebas:** pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.  
 
 **Preguntas de reflexión para el stack:**
 
