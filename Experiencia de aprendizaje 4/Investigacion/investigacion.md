@@ -55,7 +55,8 @@ La ventaja de C++ es que se tiene control total sobre cuándo y cómo se usa la 
 **13. Imagina que estás optimizando una pieza de arte generativo que usa listas enlazadas para representar elementos en movimiento. ¿Qué consideraciones tomarías en cuenta para garantizar que la gestión de la memoria sea eficiente y que no ocurran fugas de memoria?**  
 Para que la memoria sea eficiente, me aseguraría de crear cada nodo con new solo cuando sea necesario y borrarlo con delete cuando el elemento ya no se use. Usaría destructores y funciones como clear() para liberar todos los nodos al final o cuando reinicie la escena. También vigilaría que los punteros como head y tail siempre se actualicen correctamente y los pondría en nullptr después de borrar nodos para evitar punteros colgantes y fugas de memoria.
 
-**14. Pruebas: pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.**  
+**14. Pruebas: pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.**   
+Mi reflexión sobre lo que probe es que gracias a probar el código con el depurador es muchisimo más sencillo entender cómo funciona el código ya que lo vas revisando por partes aunque sigue siendo un poco confuso para mi el uso de este.  
 
 ### Actividad 2
 
