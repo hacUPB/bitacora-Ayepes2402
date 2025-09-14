@@ -246,19 +246,33 @@ private:
 Hice un programa de fuegos artificiales en el cual usé un arreglo de partículas para cada explosión y una pila para guardar las explosiones que van saliendo y desapareciendo. El usuario puede dar clic para crear nuevas explosiones, usar la tecla C para cambiar colores, la G para activar o quitar gravedad y la R para borrar todo. También cuidé que la memoria se libere cuando las explosiones terminan, para que el programa no se ponga lento. Con esto cumplí lo que pedía el reto: que sea interactivo, que use estructuras de datos y que funcione bien.  
 
 **Aquí se evidencia el cielo para los fuegos artificiales**  
+
 ![alt text](image.png)  
 **Aquí se muestran los fuegos artificiales despues de hacer click**  
+
 ![alt text](image-1.png)  
 **Aquí se evidencia cuando cambian de color los fuegos artificiales**   
+
 ![alt text](image-2.png)  
 **Aquí se evidencia como se borran los fuegos artificiales**    
 Antes:  
+
 ![alt text](image-3.png)  
-Despues:  
+Despues: 
+
 ![alt text](image-4.png)  
 
 **RAE 2 – Pruebas del programa**
+
 Probé cada parte por separado: revisé que las partículas se muevan bien, que las explosiones se eliminen cuando acaban y que los colores cambien al presionar la tecla. Después probé todo junto, creando muchas explosiones, activando y quitando la gravedad y borrando la pantalla para ver que no fallara. También verifiqué que la memoria no se quede ocupada cuando las explosiones se borran. Con estas pruebas me aseguré de que el programa completo funciona sin errores.  
+
+**Algunas pruebas**
+* Probé que al dar un clic saliera una sola explosión en el lugar correcto y que las partículas tuvieran colores y tamaños diferentes.    
+* Revisé que cada partícula se fuera apagando hasta desaparecer, para ver que su tiempo de vida sí funcionara.    
+* Verifiqué que las teclas C y G cambiaran los colores y la gravedad en todas las partículas que ya estaban en pantalla.    
+* Hice clic en varios lugares para ver que siempre salieran las explosiones y que el movimiento fuera fluido.  
+* Comprobé que el efecto completo se viera bien, como un espectáculo de fuegos artificiales.  
+
 [Video funcionamiento programa](https://youtu.be/p_z_aiNJ2_Q)  
 
 
