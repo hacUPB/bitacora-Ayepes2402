@@ -176,7 +176,7 @@ Podría cambiar el nodo para que guarde objetos más grandes o estructuras. Pero
 Sí, En push creo un nodo con new y lo pongo como top. En pop elimino el nodo de top con delete y top pasa al siguiente.
 
 **2. ¿Soy capaz de identificar y corregir una fuga de memoria en una implementación de stack manual?**  
-Sí. Si un nodo no se borra al hacer pop o clear, reviso el código y agrego delete para liberar la memoria.
+Sí, Si un nodo no se borra al hacer pop o clear, reviso el código y agrego delete para liberar la memoria.
 
 **3. ¿Puedo modificar el stack para que incluya una función que busque un elemento específico, sin alterar el orden de los elementos apilados?**   
 Sí, Puedo recorrer los nodos desde top con un puntero y comparar valores sin cambiar nada del stack.
