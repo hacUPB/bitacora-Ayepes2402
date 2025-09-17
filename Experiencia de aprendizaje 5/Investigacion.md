@@ -140,4 +140,52 @@ El tamaño de una clase depende de sus miembros de datos, alineación y punteros
 * Métodos: el código de los métodos reside en la sección de código (texto) del programa.  
 * Vtables: estructuras usadas para implementar métodos virtuales.   
 
-**Prompt para ChatGPT: ¿Dónde se almacenan los datos y métodos de una clase en C++ en la memoria? Explica el concepto de vtable y cómo se relaciona con los métodos virtua**
+**Prompt para ChatGPT: ¿Dónde se almacenan los datos y métodos de una clase en C++ en la memoria? Explica el concepto de vtable y cómo se relaciona con los métodos virtua**   
+En C++ cada parte de una clase se guarda en zonas distintas:  
+* Atributos normales: en la memoria del objeto (stack si es local o heap si usas new).   
+* static: una sola copia en el segmento global/estático, compartida por todos los objetos.  
+* Código de métodos: en el segmento de código; no aumenta el sizeof del objeto.  
+* Memoria dinámica: en el heap, el objeto solo guarda un puntero.  
+
+**vtable**    
+Si la clase tiene métodos virtual, el compilador crea una vtable (tabla de punteros a funciones) en memoria de solo lectura.
+Cada objeto polimórfico guarda un vptr (puntero a esa tabla).
+Cuando llamas a un método virtual, se usa el vptr para encontrar en tiempo de ejecución la implementación correcta.  
+
+### Exploración de métodos virtuales
+
+Objetivo: comprender el impacto de los métodos virtuales en la memoria y el rendimiento.
+
+Considera los siguientes pasos:
+
+**Crea una jerarquía de clases con métodos virtuales:**
+```cpp
+cpp
+class Base {
+public:
+    virtual void display() {
+        std::cout << "Base display" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        std::cout << "Derived display" << std::endl;
+    }
+};
+```
+**Analiza la vtables. ¿En qué parte de la memoria se encuentran las vtable de cada objeto?**   
+* La vtable está en la memoria global de solo lectura.   
+* Cada objeto solo guarda un vptr que apunta a esa vtable.   
+```cpp
+Base b;
+Derived d;
+std::cout << "Vtable de Base: " << *(void**)&b << std::endl;
+std::cout << "Vtable de Derived: " << *(void**)&d << std::endl;
+```
+**Todo junto**
+
+![alt text](image-1.png)   
+
+**Usar un depurador: observar cómo se resuelven las llamadas a métodos virtuales en tiempo de ejecución. Puedes usar para ello varias herramientas del depurador. En el menú Debug de Visual Studio, selecciona Windows y luego Memory. Allí podrás explorar la memoria. Si das click derecho sobre una función del código puedes ver el programa en ensamblador con Go to Dissasembly.**
