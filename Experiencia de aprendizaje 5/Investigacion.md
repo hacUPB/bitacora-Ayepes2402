@@ -108,7 +108,8 @@ public:
         delete[] ptr;
     }
 };
-```  
+``` 
+![alt text](image.png) 
 **¿Cómo afectan los datos estáticos al tamaño de la instancia?**  
 No lo cambian, la variable static vive en una zona global y es única para toda la clase, así que cada objeto solo cuenta el tamaño de sus miembros no estáticos.  
 
@@ -133,4 +134,10 @@ Los atributos suman espacio al tamaño del objeto. Los métodos no ocupan espaci
 **Conclusión: resumir los hallazgos y cómo esto impacta el diseño de clases.**  
 El tamaño de una clase depende de sus miembros de datos, alineación y punteros internos, no de sus funciones. Al diseñar clases conviene elegir tipos y estructuras pensando en el espacio que ocuparán y en cómo administrar la memoria si se usan recursos dinámicos.  
 
-![alt text](<Captura de pantalla 2025-09-15 171804.png>)
+### Sesión 2: ubicación en memoria de datos y métodos    
+### Análisis de la estructura de una clase    
+* Datos: los atributos se almacenan en el stack o heap, según cómo se instancien.  
+* Métodos: el código de los métodos reside en la sección de código (texto) del programa.  
+* Vtables: estructuras usadas para implementar métodos virtuales.   
+
+**Prompt para ChatGPT: ¿Dónde se almacenan los datos y métodos de una clase en C++ en la memoria? Explica el concepto de vtable y cómo se relaciona con los métodos virtua**
