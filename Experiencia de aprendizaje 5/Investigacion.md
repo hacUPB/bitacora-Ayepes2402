@@ -109,7 +109,8 @@ public:
     }
 };
 ``` 
-![alt text](image.png) 
+![alt text](image.png)  
+
 **¿Cómo afectan los datos estáticos al tamaño de la instancia?**  
 No lo cambian, la variable static vive en una zona global y es única para toda la clase, así que cada objeto solo cuenta el tamaño de sus miembros no estáticos.  
 
