@@ -1,4 +1,4 @@
-### Sesión 1: la naturaleza de los objetos en C++  
+## Sesión 1: la naturaleza de los objetos en C++  
 ## Introducción a los Objetos
 
 Concepto: un objeto es una instancia de una clase que combina datos (atributos) y comportamiento (métodos).
@@ -64,7 +64,7 @@ Se guardan como bloques de bytes que contienen solo sus datos.
 Cada objeto (p1, p2) ocupa su propio bloque; sus direcciones son distintas y no se mezclan.
 Dentro de cada objeto, los atributos (x, y) están uno junto al otro en memoria, con posible pequeño padding.  
 
-### Análisis de diferencias  
+## Análisis de diferencias  
 **Objetivo: comparar cómo diferentes clases afectan el uso de memoria.**  
 
 Considera los siguientes pasos:  
@@ -134,7 +134,7 @@ Los atributos suman espacio al tamaño del objeto. Los métodos no ocupan espaci
 **Conclusión: resumir los hallazgos y cómo esto impacta el diseño de clases.**  
 El tamaño de una clase depende de sus miembros de datos, alineación y punteros internos, no de sus funciones. Al diseñar clases conviene elegir tipos y estructuras pensando en el espacio que ocuparán y en cómo administrar la memoria si se usan recursos dinámicos.  
 
-### Sesión 2: ubicación en memoria de datos y métodos    
+## Sesión 2: ubicación en memoria de datos y métodos    
 ## Análisis de la estructura de una clase    
 * Datos: los atributos se almacenan en el stack o heap, según cómo se instancien.  
 * Métodos: el código de los métodos reside en la sección de código (texto) del programa.  
@@ -209,7 +209,7 @@ vtable (virtual table): Para cada clase con métodos virtuales el compilador cre
 
 Así, aunque uses un puntero de la clase base, se ejecuta la versión del método que corresponde al tipo verdadero del objeto, permitiendo el polimorfismo dinámico.
 
-### Uso de punteros y referencias  
+## Uso de punteros y referencias  
 Objetivo: explorar cómo los punteros y referencias afectan la gestión de la memoria y la llamada a métodos.  
 Considera estos pasos:  
 
@@ -264,7 +264,7 @@ Cuando el programa corre, cada objeto usa su espacio de memoria para guardar sus
 **Conclusión: cómo esta comprensión afecta el diseño de sistemas.**     
 Saber dónde se guardan los datos y el código de una clase me ayuda a programar mejor, porque entiendo cuánta memoria usa cada objeto y qué partes se comparten. Así puedo decidir si crear objetos en la pila o en el heap, y cuándo vale la pena usar métodos virtuales para tener polimorfismo aunque ocupen un poco más de espacio.  
 
-### Sesión 3: implementación Interna de Encapsulamiento, Herencia y Polimorfismo   
+## Sesión 3: implementación Interna de Encapsulamiento, Herencia y Polimorfismo   
 Profundizando en el encapsulamiento
 Modificadores de acceso: private, protected, public. Control de acceso: implementado por el compilador, no por restricciones en tiempo de ejecución.
 Crear una clase con diferentes niveles de acceso:  
@@ -326,7 +326,7 @@ Puede provocar fallos graves, pérdida de datos y abrir huecos de seguridad.
 **¿Qué implicaciones tiene este experimento sobre la confianza en las barreras de encapsulamiento que proporciona C++?**   
 Que es una regla del compilador para mantener orden, pero no una barrera imposible de romper.
 
-### Herencia y la Relación en Memoria  
+## Herencia y la Relación en Memoria  
 Considera los siguientes pasos:  
 Crear clases con herencia:  
 ````cpp
@@ -363,7 +363,7 @@ Después, justo a continuación, se guardan los atributos propios de la clase de
 Así, la dirección del objeto (&obj) coincide con la de su primer atributo de la base, lo que permite que un puntero o referencia a la clase base pueda usar ese objeto sin mover nada en memoria.   
 Si hay varios niveles de herencia, cada nivel añade sus miembros al final, uno tras otro, formando una sola estructura continua.  
 
-### Polimorfismo y Vtables en detalle  
+## Polimorfismo y Vtables en detalle  
 Considera los siguientes pasos:  
 Crear una jerarquía polimórfica:  
 ````cpp
