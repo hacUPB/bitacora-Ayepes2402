@@ -14,13 +14,13 @@ public:
     }
 };
 ```
-**¿Qué representa la clase Particle?**
+**¿Qué representa la clase Particle?**  
 representa la posicion y el movimiento de un objeto que combina los atributos y los métodos.  
 
-**¿Cómo interactúan sus atributos y métodos?**   
+**¿Cómo interactúan sus atributos y métodos?**     
 El método de move ayuda a cambiar los atributos de la posición sumandoles 1.  
 
-**Prompt para ChatGPT: explícame en detalle qué es un objeto en C++ y cómo se relaciona con una clase. Usa el ejemplo de una clase Particle con atributos x y y y un método move.**  
+**Prompt para ChatGPT: explícame en detalle qué es un objeto en C++ y cómo se relaciona con una clase. Usa el ejemplo de una clase Particle con atributos x y y y un método move.**    
 * Clase = definición/plantilla. Objeto = instancia concreta que ocupa memoria.  
 * Un objeto contiene los datos (miembros) en memoria; los métodos no se duplican por objeto.  
 * this es el puntero implícito que permite al método actuar sobre el objeto.  
@@ -28,8 +28,8 @@ El método de move ayuda a cambiar los atributos de la posición sumandoles 1.
 * Tiempo de vida y forma de asignación (stack vs heap vs estático) determinan cuándo y cómo se crean/ destruyen los objetos.   
 * Ten cuidado con inicialización (usa constructores o {}), copia/ movimiento y slicing cuando haya herencia.    
 
-## Explorando la memoria
-**Objetivo: entender cómo se almacenan los objetos en memoria.**    
+## Explorando la memoria  
+**Objetivo: entender cómo se almacenan los objetos en memoria.**      
 Considera los siguientes pasos:  
 Crear instancias:  
 ```
@@ -37,22 +37,22 @@ Particle p1;
 Particle p2;
 ```
 
-**Explorar la memoria usando punteros:**  
+**Explorar la memoria usando punteros:**    
 ```
 std::cout << "Dirección de p1: " << &p1 << std::endl;
 std::cout << "Dirección de p2: " << &p2 << std::endl;
 ```
-**Determinar el tamaño del objeto:**  
+**Determinar el tamaño del objeto:**    
 ```
 std::cout << "Tamaño de Particle: " << sizeof(Particle) << " bytes" << std::endl;
 ```
 
-**Imprimir direcciones de atributos:**  
+**Imprimir direcciones de atributos:**    
 ```
 std::cout << "Dirección de p1.x: " << &(p1.x) << std::endl;
 std::cout << "Dirección de p1.y: " << &(p1.y) << std::endl;
 ```  
-## Reflexión Guiada:  
+## Reflexión Guiada:    
 * **¿Los atributos están almacenados de forma contigua?**  
 Sí, x y y quedan uno al lado del otro en memoria, solo puede haber un pequeño espacio de alineación.  
 
@@ -303,9 +303,13 @@ En tiempo de ejecución no hay comprobación especial: simplemente el binario fi
 
 **Ejemplo de como protege lo que está privado**   
 
-![alt text](<Captura de pantalla 2025-09-22 143338.png>)  
+![alt text](<Captura de pantalla 2025-09-22 143338.png>)    
 
-## Hagamos un poco de hackers y rompamos el encapsulamiento  
+## Hagamos un poco de hackers y rompamos el encapsulamiento     
+![alt text](<Captura de pantalla 2025-09-22 163519.png>)      
+
+**Despues de hacer el hacking**     
+![alt text](image-4.png)     
 
 ## Ahora reflexiona:
 
