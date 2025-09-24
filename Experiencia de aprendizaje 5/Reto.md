@@ -324,7 +324,7 @@ En esta imagen se aprecia cómo se cambió el color presionando la tecla C
 En esta imagen se evidencia cómo se usa la g para cambiar la gravedad    
 
 
-<video controls src="Grabación 2025-09-24 171222.mp4" title="Video de experimento"></video>    
+<video controls src="grabacion-2025-09-24-171222_g2T1ktJp.mp4" title="Title"></video>
 
 
 En el video se muestra cómo funciona cada tecla   
