@@ -255,3 +255,8 @@ En esta imagen se observa el estado Pulse del patrón **State**, que se activa a
 
 
 En esta imagen se muestra la ejecución del programa en el estado Pulse mientras se realiza una prueba de rendimiento en Visual Studio. Se observa que la aplicación mantiene un uso estable de memoria y CPU, lo que demuestra que el programa funciona correctamente y de manera eficiente.
+
+## Video  
+
+[Experimento]()
+
