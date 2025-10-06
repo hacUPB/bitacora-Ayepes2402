@@ -302,23 +302,23 @@ Solo se puede modificar o consultar este estado mediante los métodos públicos 
 En resumen, en el proyecto se ve herencia porque FadeParticle y SpiralParticle heredan de BaseParticle. Hay polimorfismo cuando todas las partículas se guardan en un vector de BaseParticle y cada una ejecuta su propio update() y draw() según su tipo. El encapsulamiento aparece al mantener las variables internas privadas y solo accesibles mediante métodos públicos, protegiendo los datos.  
 
 **Experimentación**   
-![alt text](<Captura de pantalla 2025-09-24 170158.png>)   
+![alt text](<../Imagenes/Captura de pantalla 2025-09-24 170158.png>)   
 
 
 En la imagen se observa la aplicación corriendo mientras el Performance Profiler de Visual Studio registra el uso de CPU y memoria.  
 
-![alt text](<Captura de pantalla 2025-09-24 170452.png>)   
+![alt text](<../Imagenes/Captura de pantalla 2025-09-24 170452.png>)   
 
 
 En esta imagen se aprecia cómo el programa responde a la interacción del usuario. Se generaron múltiples explosiones haciendo clic en diferentes puntos   
 
-![alt text](<Captura de pantalla 2025-09-24 170651.png>) ![alt text](<Captura de pantalla 2025-09-24 170452-1.png>)    
+![alt text](<../Imagenes/Captura de pantalla 2025-09-24 170651.png>) 
 
 
 En esta imagen se aprecia cómo se cambió el color presionando la tecla C    
 
 
-![alt text](<Captura de pantalla 2025-09-24 170925.png>)    
+![alt text](<../Imagenes/Captura de pantalla 2025-09-24 170925.png>)    
 
 
 En esta imagen se evidencia cómo se usa la g para cambiar la gravedad    

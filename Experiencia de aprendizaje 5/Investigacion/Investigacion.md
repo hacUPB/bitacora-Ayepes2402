@@ -109,7 +109,7 @@ public:
     }
 };
 ``` 
-![alt text](image.png)  
+![alt text](../Imagenes/image.png)  
 
 **¿Cómo afectan los datos estáticos al tamaño de la instancia?**  
 No lo cambian, la variable static vive en una zona global y es única para toda la clase, así que cada objeto solo cuenta el tamaño de sus miembros no estáticos.  
@@ -187,7 +187,7 @@ std::cout << "Vtable de Derived: " << *(void**)&d << std::endl;
 ```
 **Todo junto**
 
-![alt text](image-1.png)   
+![alt text](../Imagenes/image-1.png)   
 
 **Usar un depurador: observar cómo se resuelven las llamadas a métodos virtuales en tiempo de ejecución. Puedes usar para ello varias herramientas del depurador. En el menú Debug de Visual Studio, selecciona Windows y luego Memory. Allí podrás explorar la memoria. Si das click derecho sobre una función del código puedes ver el programa en ensamblador con Go to Dissasembly.**  
 
@@ -303,13 +303,13 @@ En tiempo de ejecución no hay comprobación especial: simplemente el binario fi
 
 **Ejemplo de como protege lo que está privado**   
 
-![alt text](<Captura de pantalla 2025-09-22 143338.png>)    
+![alt text](<../Imagenes/Captura de pantalla 2025-09-22 143338.png>)    
 
 ## Hagamos un poco de hackers y rompamos el encapsulamiento     
-![alt text](<Captura de pantalla 2025-09-22 163519.png>)      
+![alt text](<../Imagenes/Captura de pantalla 2025-09-22 163519.png>)      
 
 **Despues de hacer el hacking**     
-![alt text](image-4.png)     
+![alt text](../Imagenes/image-4.png)     
 
 ## Ahora reflexiona:
 
@@ -352,7 +352,7 @@ std::cout << "Dirección de d: " << &d << std::endl;
 std::cout << "Dirección de d.baseVar: " << &(d.baseVar) << std::endl;
 std::cout << "Dirección de d.derivedVar: " << &(d.derivedVar) << std::endl;
 ````
-![alt text](image-2.png)  
+![alt text](../Imagenes/image-2.png)  
 
 **¿Cómo se organizan los atributos en memoria?**  
 Primero se guardan los de la clase base y después, en orden, los de la clase derivada. Así un objeto derivado empieza igual que uno de la base.
@@ -399,7 +399,7 @@ for (Animal* animal : animals) {
 }
 ````  
 **Prueba**  
-![alt text](image-3.png)
+![alt text](../Imagenes/image-3.png)
 
 **1. Analizar con un depurador: observa cómo se resuelven las llamadas a makeSound() en tiempo de ejecución.**  
 
