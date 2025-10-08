@@ -216,42 +216,42 @@ En mi código, el patrón **Observer** permite que cuando presiono una tecla, to
 
 **Pantalla inicial**  
 
-![alt text](<Captura de pantalla 2025-10-06 170521.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 170521.png>)
 
 
 En esta imagen se ve la pantalla inicial con los orbes morados y azules en movimiento suave. Aún no se ha presionado ninguna tecla, mostrando el estado inicial del programa.
 
 **Estado Light (Se iluminan)**
 
-![alt text](<Captura de pantalla 2025-10-06 171648.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 171648.png>)
 
 
 En esta imagen se muestra el estado Light del patrón **State**, que se activa al presionar la tecla L. Las partículas cambian a tonos morados y azules, mostrando un efecto visual más suave y luminoso. Esto evidencia cómo el programa modifica su comportamiento dependiendo del estado activo. En ese momento también participa el patrón **Observer**, porque cuando presionas la tecla L, el sistema notifica a todas las partículas que deben cambiar su comportamiento al estado Light.
 
 **Estado Dance (Se mueven)**
 
-![alt text](<Captura de pantalla 2025-10-06 171902.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 171902.png>)
 
 
 En esta imagen se observa el estado Dance del patrón **State**, que se activa al presionar la tecla D. Las partículas se mueven de forma más rápida y dinámica, mostrando un comportamiento más animado. Esto demuestra cómo el programa cambia sus acciones según el estado que el usuario elija. En ese momento también participa el patrón **Observer**, porque cuando presionas la tecla D, el sistema notifica a todas las partículas que deben cambiar su comportamiento al estado Dance.
 
 **Estado Silence (Paran de moverse)**
 
-![alt text](<Captura de pantalla 2025-10-06 172114.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 172114.png>)
 
 
 En esta imagen se observa el estado Silence del patrón **State**, que se activa al presionar la tecla S. Las partículas se mueven lentamente y con suavidad, representando un ambiente tranquilo. En ese momento también participa el patrón **Observer**, porque cuando presionas la tecla S, el sistema notifica a todas las partículas que deben cambiar su comportamiento al estado Silence.
 
 **Estado Pulse (Palpitan)**
 
-![alt text](<Captura de pantalla 2025-10-06 172345.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 172345.png>)
 
 
 En esta imagen se observa el estado Pulse del patrón **State**, que se activa al presionar la tecla P. Las partículas cambian su tamaño de forma rítmica, creando un efecto de pulsación. Aquí también participa el patrón **Observer**, ya que todas las partículas reciben la notificación del cambio de estado y reaccionan al mismo tiempo al modo Pulse.
 
 **Rendimiento del programa**
 
-![alt text](<Captura de pantalla 2025-10-06 172928.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-06 172928.png>)
 
 
 En esta imagen se muestra la ejecución del programa en el estado Pulse mientras se realiza una prueba de rendimiento en Visual Studio. Se observa que la aplicación mantiene un uso estable de memoria y CPU, lo que demuestra que el programa funciona correctamente y de manera eficiente.
@@ -270,4 +270,4 @@ Se me pidió que solo 1 de los tipos de orbes reaccionara a los estados cambiaan
 			addObserver(orb);
 		}
 ````
-![alt text](<Captura de pantalla 2025-10-08 165004.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-08 165004.png>)

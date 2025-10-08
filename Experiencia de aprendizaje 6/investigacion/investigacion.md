@@ -28,7 +28,7 @@ for (int i = 0; i < 5; ++i) {
         addObserver(p);
     }
 ````
-![alt text](<Captura de pantalla 2025-10-01 164017.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-01 164017.png>)
 
 **Adiciona un nuevo estadoy modifica el comportamiento de las partículas.**   
 ````cpp
