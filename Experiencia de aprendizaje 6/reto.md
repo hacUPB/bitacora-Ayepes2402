@@ -258,7 +258,7 @@ En esta imagen se muestra la ejecución del programa en el estado Pulse mientras
 
 ## Video  
 
-[Experimento]()
+[Experimento](https://youtu.be/pmdNXkp0uKw)
 
 **Extra**  
 Se me pidió que solo 1 de los tipos de orbes reaccionara a los estados cambiaando el observer así que le agregué un condicional
