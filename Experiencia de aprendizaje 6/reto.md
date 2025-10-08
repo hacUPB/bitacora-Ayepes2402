@@ -260,3 +260,14 @@ En esta imagen se muestra la ejecución del programa en el estado Pulse mientras
 
 [Experimento]()
 
+**Extra**  
+Se me pidió que solo 1 de los tipos de orbes reaccionara a los estados cambiaando el observer así que le agregué un condicional
+
+````cpp
+
+		//se le agrega un condicional
+		if (t == "warm") {
+			addObserver(orb);
+		}
+````
+![alt text](<Captura de pantalla 2025-10-08 165004.png>)
