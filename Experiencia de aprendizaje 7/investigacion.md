@@ -79,23 +79,41 @@ Hace un plano 3D en el centro de la pantalla que se va deformando con el shader.
 Sí, se está usando un vertex shader para los puntos del plano.
 
 **¿Estás usando un fragment shader?**    
-sí, se está usando un fragment shader para los colores del plano.
+Sí, se está usando un fragment shader para los colores del plano.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**
 El vertex shader mueve los puntos del plano para que se deforme y el fragment shader pone los colores, que van de rosado a azul según dónde esté el mouse.
 
 ## Ejemplo 3  
 
-**¿Cómo funciona?**   
-
+**¿Cómo funciona?**    
+El programa pone un plano grande en la pantalla y le aplica un shader que cambia cuando mueves el mouse (dependiendo de hacia donde se mueve cambia de color entre rosado, morado y azul) Al moverlo se ve un efecto como si la imagen se deformara, parecido una burbuja.
 
 **¿Qué resultados obtuviste?**    
-
+![alt text](<Captura de pantalla 2025-10-22 144455.png>)   
 
 **¿Estás usando un vertex shader?**   
-
+Sí, se está usando un vertex shader para los puntos del plano y para deformarlo como una burbuja.
 
 **¿Estás usando un fragment shader?**   
-
+Sí, se está usando un fragment shader para los colores del plano y que cambien dependiendo de la posición del mouse en X.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**   
+El vertex shader cambia la forma o posición del plano según los valores que recibe, como la posición del mouse y el fragment shader se encarga de pintar el color del plano, que pasa de magenta a azul dependiendo de dónde esté el cursor.
+
+## Ejemplo 4  
+
+**¿Cómo funciona?**    
+Se carga una imagen de diamantes de colores sobre un plano y el shader se encarga de seguir el movimiento del mouse para poder mover el plano.
+
+**¿Qué resultados obtuviste?**    
+![alt text](<Captura de pantalla 2025-10-22 145837.png>)
+
+**¿Estás usando un vertex shader?**   
+Sí, se usa un vertex shader para mover los puntos del plano y ajustar cómo se ve con el mouse.
+
+**¿Estás usando un fragment shader?**    
+Sí, también se usa un fragment shader para cambiar los colores y efectos de la imagen.
+
+**Analiza el código de los shaders. ¿Qué hace cada uno?**   
+El vertex shader acomoda el plano y la textura según el movimiento del mouse y el fragment shader pinta la imagen y le da los efectos visuales que se ven en pantalla.
