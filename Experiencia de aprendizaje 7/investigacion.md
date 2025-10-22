@@ -113,7 +113,7 @@ Se carga una imagen de diamantes de colores sobre un plano y el shader se encarg
 Sí, se usa un vertex shader para mover los puntos del plano y ajustar cómo se ve con el mouse.
 
 **¿Estás usando un fragment shader?**    
-Sí, también se usa un fragment shader para cambiar los colores y efectos de la imagen.
+Sí, se usa un fragment shader para cambiar los colores y efectos de la imagen.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**   
 El vertex shader acomoda el plano y la textura según el movimiento del mouse y el fragment shader pinta la imagen y le da los efectos visuales que se ven en pantalla.
@@ -121,82 +121,94 @@ El vertex shader acomoda el plano y la textura según el movimiento del mouse y 
 ## Ejemplo 5  
 
 **¿Cómo funciona?**   
-
+Carga dos imágenes: una es la original que tiene como unos diamantes de colores y la otra sirve como máscara. Después, se usa un shader que mezcla ambas para crear un efecto tipo “masking”.
 
 **¿Qué resultados obtuviste?**  
-
+![alt text](<Captura de pantalla 2025-10-22 162623.png>)
 
 **¿Estás usando un vertex shader?**  
-
+Sí, se usa un vertex shader el cual sirve para organizar los puntos de la imagen y mandarlos al siguiente paso del dibujo.
 
 **¿Estás usando un fragment shader?**  
-
+Sí, se usa un fragment shader ya que este se encarga de pintar los píxeles y mezclar la imagen normal con la máscara.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**  
+El vertex shader acomoda la forma de la imagen y el fragment shader combina los colores de las dos imágenes para crear el efecto de máscara, mostrando solo las partes que deja ver la máscara.
 
 ## Ejemplo 6  
 
 **¿Cómo funciona?**   
-
+El programa usa una cámara, un video y una imagen, y los mezcla usando una máscara que se mueve con el mouse. El shader se encarga de combinar todo y mostrar el resultado final dentro de un recuadro.
 
 **¿Qué resultados obtuviste?**  
-
+![alt text](<Captura de pantalla 2025-10-22 163309.png>)
 
 **¿Estás usando un vertex shader?**  
-
+Sí, se usa vertex shader para manejar la posición de los vértices, o sea, cómo se dibujan las formas en la pantalla.
 
 **¿Estás usando un fragment shader?**  
-
+Sí, se usa fragment shader ya que este es el que pinta los colores finales de cada píxel y mezcla las texturas (imagen, video y cámara) según la máscara.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**  
-
+El vertex shader prepara la forma y tamaño de la imagen en pantalla y el fragment shader mezcla los colores de las tres fuentes (cámara, video e imagen) aplicando la máscara para crear el efecto visual final.
 
 ## Ejemplo 7  
 
 **¿Cómo funciona?**   
-
+El programa deja pintar con una brocha en la pantalla, y lo que pintas se usa como una máscara. Un shader mezcla varias imágenes y solo se ven las partes donde dibujas. También puedes borrar o cambiar el tamaño del pincel.
 
 **¿Qué resultados obtuviste?**  
+![alt text](<Captura de pantalla 2025-10-22 163732.png>)
 
+**Despues de usar T**    
+![alt text](<Captura de pantalla 2025-10-22 163740.png>)
 
 **¿Estás usando un vertex shader?**  
-
+Sí, se usa vortex shader para ordenar los puntos donde se dibujan las imágenes en la pantalla.
 
 **¿Estás usando un fragment shader?**  
-
+Sí, se usa el fragment shader ya que este es el que pinta los colores y mezcla las texturas según la parte que pintas con la máscara.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**  
-
+El vertex shader acomoda la forma donde se dibuja todo y el fragment shader mezcla las imágenes y crea el efecto final que se ve cuando pintas.
 
 ## Ejemplo 8  
 
 **¿Cómo funciona?**   
+El programa crea una imagen en blanco y negro con ruido que cambia con el tiempo y con el movimiento del mouse. Esa imagen se pone como textura en un plano 3D que gira cuando mueves el mouse.
 
+**¿Qué resultados obtuviste?**   
+![alt text](<Captura de pantalla 2025-10-22 164125.png>)
 
-**¿Qué resultados obtuviste?**  
-
-
-**¿Estás usando un vertex shader?**  
-
+**¿Estás usando un vertex shader?**    
+Sí, se usa vertex shader para mover y girar los puntos del plano en el espacio 3D.
 
 **¿Estás usando un fragment shader?**  
-
+Sí, se usa fragment shader ya que este es el que pinta los colores y muestra la textura del ruido en la superficie.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**  
-
+El vertex shader acomoda la forma y el giro del plano y el fragment shader pinta los píxeles con la textura que cambia, creando el efecto de movimiento.
 
 ## Ejemplo 9  
 
 **¿Cómo funciona?**   
-
+El programa carga una imagen y le pone un efecto de desenfoque. Usa dos shaders: uno desenfoca a lo ancho y el otro a lo alto. El nivel de blur cambia cuando mueves el mouse.
 
 **¿Qué resultados obtuviste?**  
+![alt text](<Captura de pantalla 2025-10-22 164539.png>)
 
+**Despues de mover el mouse**  
+![alt text](<Captura de pantalla 2025-10-22 164533-1.png>)
 
 **¿Estás usando un vertex shader?**  
-
+Sí, usa vertex shader pero solo sirve para colocar bien la imagen en la pantalla.
 
 **¿Estás usando un fragment shader?**  
-
+Sí, usa fragment shader es el que realmente hace el desenfoque, mezclando los colores de los píxeles para que se vea borroso.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**  
+El shaderBlurX desenfoca de forma horizontal y el shaderBlurY de forma vertical. Juntos hacen que la imagen quede desenfocada en todas las direcciones.
+
+* **shaderBlurX:** aplica el desenfoque en el eje X, o sea, de izquierda a derecha. Toma varios píxeles vecinos en esa dirección y los mezcla para que se vea borroso horizontalmente.  
+
+* **shaderBlurY:** hace lo mismo pero en el eje Y, o sea, de arriba a abajo. Mezcla los píxeles en vertical.
