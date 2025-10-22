@@ -212,3 +212,13 @@ El shaderBlurX desenfoca de forma horizontal y el shaderBlurY de forma vertical.
 * **shaderBlurX:** aplica el desenfoque en el eje X, o sea, de izquierda a derecha. Toma varios píxeles vecinos en esa dirección y los mezcla para que se vea borroso horizontalmente.  
 
 * **shaderBlurY:** hace lo mismo pero en el eje Y, o sea, de arriba a abajo. Mezcla los píxeles en vertical.
+
+## Actividad 3  
+Ahora vas a pasar información personalizada de tu programa a los shaders. Vas a leer con detenimiento el tutorial Adding Uniforms.
+
+**¿Qué es un uniform?**   
+Una variable global y constante (está en el draw) que se está mandando desde la CPU a la GPU.
+
+**¿Cómo funciona el código de aplicación, los shaders y cómo se comunican estos?**
+
+Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.
