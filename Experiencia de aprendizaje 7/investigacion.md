@@ -67,16 +67,35 @@ Sí, se está usando un fragment shader para decidir el color y la apariencia de
 El vertex shader se encarga de decirle al programa en qué parte van los puntos del rectángulo para que se dibuje bien.En cambio, el fragment shader es el que decide qué color va a tener cada parte del dibujo.
 
 ## Ejemplo 2  
-**¿Cómo funciona?**  
 
+**¿Cómo funciona?**  
+Hace un plano 3D en el centro de la pantalla que se va deformando con el shader. El color cambia según dónde esté el mouse en X (de rosado a azul) y el plano gira cuando mueves el mouse en Y.
 
 **¿Qué resultados obtuviste?**   
 
+![alt text](<Captura de pantalla 2025-10-22 142833.png>)   
 
 **¿Estás usando un vertex shader?**    
-
+Sí, se está usando un vertex shader para los puntos del plano.
 
 **¿Estás usando un fragment shader?**    
-
+sí, se está usando un fragment shader para los colores del plano.
 
 **Analiza el código de los shaders. ¿Qué hace cada uno?**
+El vertex shader mueve los puntos del plano para que se deforme y el fragment shader pone los colores, que van de rosado a azul según dónde esté el mouse.
+
+## Ejemplo 3  
+
+**¿Cómo funciona?**   
+
+
+**¿Qué resultados obtuviste?**    
+
+
+**¿Estás usando un vertex shader?**   
+
+
+**¿Estás usando un fragment shader?**   
+
+
+**Analiza el código de los shaders. ¿Qué hace cada uno?**   
