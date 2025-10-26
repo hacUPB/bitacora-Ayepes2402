@@ -222,3 +222,20 @@ Una variable global y constante (está en el draw) que se está mandando desde l
 **¿Cómo funciona el código de aplicación, los shaders y cómo se comunican estos?**
 
 Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.
+
+**Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.**   
+
+## Actividad 4  
+
+Vas a realizar la última actividad de esta experiencia de aprendizaje. Yo sé que quieres seguir haciendo más, pero tenemos un tiempo muy limitado. Analiza el ejemplo Adding some interactivity.
+
+**¿Qué hace el código del ejemplo?**   
+
+
+**¿Cómo funciona el código de aplicación, los shaders y cómo se comunican estos?**   
+
+
+**Realiza modificaciones a ofApp.cpp y al vertex shader para conseguir otros comportamientos.**   
+
+
+**Realiza modificaciones al fragment shader para conseguir otros comportamientos.**    
