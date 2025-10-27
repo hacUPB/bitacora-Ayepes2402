@@ -223,19 +223,117 @@ Una variable global y constante (está en el draw) que se está mandando desde l
 
 Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.
 
-**Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.**   
+**Modifica el código de la actividad para cambiar el color de cada uno de los píxeles de la pantalla personalizando el fragment shader.**     
 
+En esta actividad modifiqué el fragment shader para que en lugar de mostrar colores que dependen del rojo, verde y azul de la posición original, generara un gradiente en tonos morados que cambia según la posición del píxel en la pantalla. Lo que hice fue ajustar las fórmulas del color dentro del shader, usando las coordenadas gl_FragCoord.x y gl_FragCoord.y para variar los valores del rojo y del azul, mientras dejé el verde en cero para mantener el tono morado.
+````cpp
+OF_GLSL_SHADER_HEADER
+
+out vec4 outputColor;
+
+void main()
+{
+    // Posición del píxel en pantalla
+    float x = gl_FragCoord.x / 1024.0;  
+    float y = gl_FragCoord.y / 768.0;   
+
+    // Gradiente morado mezclando la posición X e Y
+    float r = 0.5 + 0.5 * x;  // rojo aumenta hacia la derecha
+    float g = 0.0;            // sin verde, para mantener el morado
+    float b = 0.5 + 0.5 * y;  // azul aumenta hacia arriba
+    float a = 1.0;
+
+    outputColor = vec4(r, g, b, a);
+}
+````
+![alt text](<Captura de pantalla 2025-10-27 161427.png>)
 ## Actividad 4  
 
 Vas a realizar la última actividad de esta experiencia de aprendizaje. Yo sé que quieres seguir haciendo más, pero tenemos un tiempo muy limitado. Analiza el ejemplo Adding some interactivity.
 
 **¿Qué hace el código del ejemplo?**   
 
+El código del ejemplo “Adding some interactivity” muestra una imagen en la pantalla que se mueve o se desplaza según la posición del mouse. Cuando el usuario mueve el mouse, la textura cambia su ubicación en el plano, generando un efecto visual interactivo. Básicamente, el programa usa shaders para hacer que la imagen responda en tiempo real al movimiento del mouse, logrando un resultado más dinámico y atractivo.
 
 **¿Cómo funciona el código de aplicación, los shaders y cómo se comunican estos?**   
 
+El programa principal en C++ carga la imagen, el plano y los shaders, y le envía información al shader como la posición del mouse y el tamaño de la ventana. El vertex shader usa ese dato del mouse para cambiar las coordenadas de la textura y simular el movimiento, mientras que el fragment shader se encarga de pintar los colores finales de la imagen en pantalla. Ambos shaders trabajan juntos y se comunican con el código de C++ por medio de variables uniformes, lo que permite que los cambios del mouse se reflejen directamente en el efecto visual.
 
-**Realiza modificaciones a ofApp.cpp y al vertex shader para conseguir otros comportamientos.**   
+**Realiza modificaciones a ofApp.cpp y al vertex shader para conseguir otros comportamientos.**  
 
+Modifiqué el código para que el plano de la imagen no solo se desplace, sino que tenga un efecto de ondas que cambia con el movimiento del mouse. En el vertex shader agregué una fórmula con sin() que mueve los vértices en forma de ola, y en el código C++ le envié también el tiempo (time) para que la animación fluya constantemente. Así, cuando muevo el mouse, la textura parece tener movimiento, como si estuviera en el agua.
+
+En el archivo ofApp.cpp cambié la parte de draw() para enviar al shader la posición del mouse y el tiempo. Esto hace que la imagen tenga un movimiento de ondas en lugar de solo moverse, logrando un efecto más dinámico y llamativo.  
+````cpp
+void ofApp::draw() {
+img.getTexture().bind();
+shader.begin();
+
+// Posición del mouse y el tiempo al shader
+shader.setUniform1f("mouseX", ofGetMouseX());
+shader.setUniform1f("time", ofGetElapsedTimef());
+shader.setUniform2f("resolution", ofGetWidth(), ofGetHeight());
+
+ofPushMatrix();
+ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
+plane.draw();
+ofPopMatrix();
+
+shader.end();
+img.getTexture().unbind();
+}
+````
+En el shader.vert cambié el código para que los vértices del plano se muevan en forma de ondas. Agregué una fórmula con sin() que usa el tiempo y la posición del mouse para hacer que la imagen parezca moverse como si tuviera olas. De esta forma, el shader ya no deja la imagen quieta, sino que le da un efecto de movimiento continuo y más visual.   
+````cpp
+OF_GLSL_SHADER_HEADER
+
+uniform mat4 modelViewProjectionMatrix;
+uniform float mouseX;
+uniform float time;
+
+in vec4 position;
+in vec2 texcoord;
+
+out vec2 texCoordVarying;
+
+void main()
+{
+    // Movimiento tipo ola 
+    float wave = sin(position.x * 0.05 + time + mouseX * 0.01) * 20.0;
+
+    vec4 newPosition = position;
+    newPosition.y += wave; // Onda en el eje Y
+
+    texCoordVarying = texcoord;
+    gl_Position = modelViewProjectionMatrix * newPosition;
+}
+````
 
 **Realiza modificaciones al fragment shader para conseguir otros comportamientos.**    
+
+````cpp
+OF_GLSL_SHADER_HEADER
+
+uniform sampler2D tex0;
+uniform vec2 resolution;
+uniform float mouseX;
+
+in vec2 texCoordVarying;
+out vec4 outputColor;
+
+void main()
+{
+    // Color original de la textura
+    vec4 texColor = texture(tex0, texCoordVarying / resolution);
+
+    // Color morado que depende de la posición del mouse
+    float brightness = abs(sin(mouseX * 0.005));
+    vec3 purpleTint = vec3(0.6, 0.0, 0.8) * brightness;
+
+    // Se mezcla el color original con el brillo morado
+    vec3 finalColor = texColor.rgb + purpleTint;
+
+    outputColor = vec4(finalColor, 1.0);
+}
+````
+Modifiqué el fragment shader para que el color de la imagen cambie con el movimiento del mouse. Agregué una mezcla de tono morado que se vuelve más brillante o más oscuro según la posición, haciendo que la imagen se vea con un efecto de luz dinámica en lugar de solo mostrarse estática.
