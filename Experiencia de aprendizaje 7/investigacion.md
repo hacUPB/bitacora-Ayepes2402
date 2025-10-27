@@ -263,6 +263,8 @@ El programa principal en C++ carga la imagen, el plano y los shaders, y le enví
 
 Modifiqué el código para que el plano de la imagen no solo se desplace, sino que tenga un efecto de ondas que cambia con el movimiento del mouse. En el vertex shader agregué una fórmula con sin() que mueve los vértices en forma de ola, y en el código C++ le envié también el tiempo (time) para que la animación fluya constantemente. Así, cuando muevo el mouse, la textura parece tener movimiento, como si estuviera en el agua.
 
+![alt text](<Captura de pantalla 2025-10-27 163637.png>)
+
 En el archivo ofApp.cpp cambié la parte de draw() para enviar al shader la posición del mouse y el tiempo. Esto hace que la imagen tenga un movimiento de ondas en lugar de solo moverse, logrando un efecto más dinámico y llamativo.  
 ````cpp
 void ofApp::draw() {
@@ -310,6 +312,8 @@ void main()
 ````
 
 **Realiza modificaciones al fragment shader para conseguir otros comportamientos.**    
+
+![alt text](<Captura de pantalla 2025-10-27 164614.png>)
 
 ````cpp
 OF_GLSL_SHADER_HEADER
