@@ -51,11 +51,11 @@ Ahora ejecuta el código original. Analiza los resultados y responde:
 El código carga un shader y se lo pone a un rectángulo que ocupa toda la pantalla. En el draw() el shader se activa, se dibuja el rectángulo y luego se desactiva. Todo lo que se dibuje entre shader.begin() y shader.end() pasa por la tarjeta gráfica y cambia según el shader.
 
 **¿Qué resultados obtuviste?**   
-![alt text](<Captura de pantalla 2025-10-20 171343.png>)   
+![alt text](<../imagenes/Captura de pantalla 2025-10-20 171343.png>)   
 
 **Despues de cambiar el código en clase**  
 
-![alt text](<Captura de pantalla 2025-10-20 173104.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-20 173104.png>)
 
 **¿Estás usando un vertex shader?**    
 Sí, se está usando un vertex shader para calcular dónde va cada punto del modelo.
@@ -73,7 +73,7 @@ Hace un plano 3D en el centro de la pantalla que se va deformando con el shader.
 
 **¿Qué resultados obtuviste?**   
 
-![alt text](<Captura de pantalla 2025-10-22 142833.png>)   
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 142833.png>)   
 
 **¿Estás usando un vertex shader?**    
 Sí, se está usando un vertex shader para los puntos del plano.
@@ -90,7 +90,7 @@ El vertex shader mueve los puntos del plano para que se deforme y el fragment sh
 El programa pone un plano grande en la pantalla y le aplica un shader que cambia cuando mueves el mouse (dependiendo de hacia donde se mueve cambia de color entre rosado, morado y azul) Al moverlo se ve un efecto como si la imagen se deformara, parecido una burbuja.
 
 **¿Qué resultados obtuviste?**    
-![alt text](<Captura de pantalla 2025-10-22 144455.png>)   
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 144455.png>)   
 
 **¿Estás usando un vertex shader?**   
 Sí, se está usando un vertex shader para los puntos del plano y para deformarlo como una burbuja.
@@ -107,7 +107,7 @@ El vertex shader cambia la forma o posición del plano según los valores que re
 Se carga una imagen de diamantes de colores sobre un plano y el shader se encarga de seguir el movimiento del mouse para poder mover el plano.
 
 **¿Qué resultados obtuviste?**    
-![alt text](<Captura de pantalla 2025-10-22 145837.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 145837.png>)
 
 **¿Estás usando un vertex shader?**   
 Sí, se usa un vertex shader para mover los puntos del plano y ajustar cómo se ve con el mouse.
@@ -124,7 +124,7 @@ El vertex shader acomoda el plano y la textura según el movimiento del mouse y 
 Carga dos imágenes: una es la original que tiene como unos diamantes de colores y la otra sirve como máscara. Después, se usa un shader que mezcla ambas para crear un efecto tipo “masking”.
 
 **¿Qué resultados obtuviste?**  
-![alt text](<Captura de pantalla 2025-10-22 162623.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 162623.png>)
 
 **¿Estás usando un vertex shader?**  
 Sí, se usa un vertex shader el cual sirve para organizar los puntos de la imagen y mandarlos al siguiente paso del dibujo.
@@ -141,7 +141,7 @@ El vertex shader acomoda la forma de la imagen y el fragment shader combina los 
 El programa usa una cámara, un video y una imagen, y los mezcla usando una máscara que se mueve con el mouse. El shader se encarga de combinar todo y mostrar el resultado final dentro de un recuadro.
 
 **¿Qué resultados obtuviste?**  
-![alt text](<Captura de pantalla 2025-10-22 163309.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 163309.png>)
 
 **¿Estás usando un vertex shader?**  
 Sí, se usa vertex shader para manejar la posición de los vértices, o sea, cómo se dibujan las formas en la pantalla.
@@ -158,10 +158,10 @@ El vertex shader prepara la forma y tamaño de la imagen en pantalla y el fragme
 El programa deja pintar con una brocha en la pantalla, y lo que pintas se usa como una máscara. Un shader mezcla varias imágenes y solo se ven las partes donde dibujas. También puedes borrar o cambiar el tamaño del pincel.
 
 **¿Qué resultados obtuviste?**  
-![alt text](<Captura de pantalla 2025-10-22 163732.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 163732.png>)
 
 **Despues de usar T**    
-![alt text](<Captura de pantalla 2025-10-22 163740.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 163740.png>)
 
 **¿Estás usando un vertex shader?**  
 Sí, se usa vortex shader para ordenar los puntos donde se dibujan las imágenes en la pantalla.
@@ -178,7 +178,7 @@ El vertex shader acomoda la forma donde se dibuja todo y el fragment shader mezc
 El programa crea una imagen en blanco y negro con ruido que cambia con el tiempo y con el movimiento del mouse. Esa imagen se pone como textura en un plano 3D que gira cuando mueves el mouse.
 
 **¿Qué resultados obtuviste?**   
-![alt text](<Captura de pantalla 2025-10-22 164125.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 164125.png>)
 
 **¿Estás usando un vertex shader?**    
 Sí, se usa vertex shader para mover y girar los puntos del plano en el espacio 3D.
@@ -195,10 +195,10 @@ El vertex shader acomoda la forma y el giro del plano y el fragment shader pinta
 El programa carga una imagen y le pone un efecto de desenfoque. Usa dos shaders: uno desenfoca a lo ancho y el otro a lo alto. El nivel de blur cambia cuando mueves el mouse.
 
 **¿Qué resultados obtuviste?**  
-![alt text](<Captura de pantalla 2025-10-22 164539.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 164539.png>)
 
 **Despues de mover el mouse**  
-![alt text](<Captura de pantalla 2025-10-22 164533-1.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-22 164533-1.png>)
 
 **¿Estás usando un vertex shader?**  
 Sí, usa vertex shader pero solo sirve para colocar bien la imagen en la pantalla.
@@ -233,20 +233,20 @@ out vec4 outputColor;
 
 void main()
 {
-    // Posición del píxel en pantalla
+    
     float x = gl_FragCoord.x / 1024.0;  
     float y = gl_FragCoord.y / 768.0;   
 
-    // Gradiente morado mezclando la posición X e Y
-    float r = 0.5 + 0.5 * x;  // rojo aumenta hacia la derecha
-    float g = 0.0;            // sin verde, para mantener el morado
-    float b = 0.5 + 0.5 * y;  // azul aumenta hacia arriba
+    
+    float r = 0.5 + 0.5 * x;  
+    float g = 0.0;            
+    float b = 0.5 + 0.5 * y;  
     float a = 1.0;
 
     outputColor = vec4(r, g, b, a);
 }
 ````
-![alt text](<Captura de pantalla 2025-10-27 161427.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-27 161427.png>)
 ## Actividad 4  
 
 Vas a realizar la última actividad de esta experiencia de aprendizaje. Yo sé que quieres seguir haciendo más, pero tenemos un tiempo muy limitado. Analiza el ejemplo Adding some interactivity.
@@ -263,7 +263,7 @@ El programa principal en C++ carga la imagen, el plano y los shaders, y le enví
 
 Modifiqué el código para que el plano de la imagen no solo se desplace, sino que tenga un efecto de ondas que cambia con el movimiento del mouse. En el vertex shader agregué una fórmula con sin() que mueve los vértices en forma de ola, y en el código C++ le envié también el tiempo (time) para que la animación fluya constantemente. Así, cuando muevo el mouse, la textura parece tener movimiento, como si estuviera en el agua.
 
-![alt text](<Captura de pantalla 2025-10-27 163637.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-27 163637.png>)
 
 En el archivo ofApp.cpp cambié la parte de draw() para enviar al shader la posición del mouse y el tiempo. Esto hace que la imagen tenga un movimiento de ondas en lugar de solo moverse, logrando un efecto más dinámico y llamativo.  
 ````cpp
@@ -271,7 +271,7 @@ void ofApp::draw() {
 img.getTexture().bind();
 shader.begin();
 
-// Posición del mouse y el tiempo al shader
+
 shader.setUniform1f("mouseX", ofGetMouseX());
 shader.setUniform1f("time", ofGetElapsedTimef());
 shader.setUniform2f("resolution", ofGetWidth(), ofGetHeight());
@@ -300,11 +300,11 @@ out vec2 texCoordVarying;
 
 void main()
 {
-    // Movimiento tipo ola 
+    
     float wave = sin(position.x * 0.05 + time + mouseX * 0.01) * 20.0;
 
     vec4 newPosition = position;
-    newPosition.y += wave; // Onda en el eje Y
+    newPosition.y += wave; 
 
     texCoordVarying = texcoord;
     gl_Position = modelViewProjectionMatrix * newPosition;
@@ -313,7 +313,7 @@ void main()
 
 **Realiza modificaciones al fragment shader para conseguir otros comportamientos.**    
 
-![alt text](<Captura de pantalla 2025-10-27 164614.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-27 164614.png>)
 
 ````cpp
 OF_GLSL_SHADER_HEADER
@@ -327,14 +327,14 @@ out vec4 outputColor;
 
 void main()
 {
-    // Color original de la textura
+    
     vec4 texColor = texture(tex0, texCoordVarying / resolution);
 
-    // Color morado que depende de la posición del mouse
+   
     float brightness = abs(sin(mouseX * 0.005));
     vec3 purpleTint = vec3(0.6, 0.0, 0.8) * brightness;
 
-    // Se mezcla el color original con el brillo morado
+   
     vec3 finalColor = texColor.rgb + purpleTint;
 
     outputColor = vec4(finalColor, 1.0);

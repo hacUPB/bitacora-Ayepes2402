@@ -149,42 +149,14 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 ````
-**ofApp.h**
-````cpp
-#pragma once
-
-#include "ofMain.h"
-
-class ofApp : public ofBaseApp{
-	public:
-
-	void setup();
-	void update();
-	void draw();
-	
-	void keyPressed(int key);
-	void keyReleased(int key);
-	void mouseMoved(int x, int y);
-	void mouseDragged(int x, int y, int button);
-	void mousePressed(int x, int y, int button);
-	void mouseReleased(int x, int y, int button);
-	void windowResized(int w, int h);
-	void dragEvent(ofDragInfo dragInfo);
-	void gotMessage(ofMessage msg);
-	
-	ofShader shader;
-	ofPlanePrimitive plane;
-	ofImage img;
-};
-````
 
 **Foto**  
-![alt text](<Captura de pantalla 2025-10-28 153857.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-28 153857.png>)
 
 **Foto donde se ve que puse una nueva foto e los archivos**  
-![alt text](<Captura de pantalla 2025-10-28 154812.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-28 154812.png>)
 
-[video del programa funcionando](https://youtu.be/Co1o8V9daRU)
+[Video del programa funcionando](https://youtu.be/Co1o8V9daRU)
   
 **Prueba en ofApp.cpp**   
 
