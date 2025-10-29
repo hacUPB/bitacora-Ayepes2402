@@ -176,9 +176,11 @@ Cuando tuve todo listo, probé la aplicación completa desde Visual Studio. Mov�
 
 **Extra**  
 **Que manda la CPU y la GPU**    
+
 En este programa, la CPU se encarga de preparar todo lo que la GPU necesita para dibujar. La CPU carga la imagen, el shader y el plano, y luego le manda a la GPU los valores del mouse, el tamaño de la ventana y la textura de la imagen. También le envía las posiciones de los puntos del plano para que la GPU sepa cómo dibujarlo. Con esa información, la GPU usa los shaders para crear el efecto visual: en el vertex shader, mueve los puntos del plano como si fueran ondas según la posición del mouse, y en el fragment shader, pinta cada parte con los colores de la imagen. La GPU no le devuelve nada a la CPU, solo muestra el resultado en la pantalla.
 
 **Resumen**  
+
 La CPU le manda a la GPU la imagen, la posición del mouse y el tamaño de la ventana. La GPU usa eso para mover el plano con ondas y mostrar la imagen en pantalla. La GPU no le devuelve nada a la CPU, solo dibuja el resultado.
 
 **Parte del código donde se hace eso**  
