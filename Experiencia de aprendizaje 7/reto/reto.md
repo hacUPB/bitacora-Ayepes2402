@@ -221,5 +221,5 @@ void main()
 ````
 
 **Fotos**  
-![alt text](<Captura de pantalla 2025-10-29 163750.png>)    
-![alt text](<Captura de pantalla 2025-10-29 163802.png>)
+![alt text](<../imagenes/Captura de pantalla 2025-10-29 163750.png>)    
+![alt text](<../imagenes/Captura de pantalla 2025-10-29 163802.png>)
